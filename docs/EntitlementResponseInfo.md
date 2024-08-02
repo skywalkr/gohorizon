@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdUserOrGroupId** | Pointer to **string** | Unique SID representing the ad-user-or-group | [optional] 
-**ErrorMessages** | Pointer to **[]string** | Reasons for the failure of the operation. | [optional] 
+**ErrorMessages** | Pointer to **[]string** | Reasons for the failure of the operation. This field is deprecated since 2203 release. | [optional] 
+**Errors** | Pointer to [**[]APIError**](APIError.md) | List of error objects containing error key and error message. | [optional] 
 **StatusCode** | Pointer to **int32** | Response HTTP status code of the operation. | [optional] 
 **Timestamp** | Pointer to **int64** | Timestamp in milliseconds when the operation failed. Measured as epoch time. | [optional] 
 
@@ -77,6 +78,31 @@ SetErrorMessages sets ErrorMessages field to given value.
 `func (o *EntitlementResponseInfo) HasErrorMessages() bool`
 
 HasErrorMessages returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *EntitlementResponseInfo) GetErrors() []APIError`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *EntitlementResponseInfo) GetErrorsOk() (*[]APIError, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *EntitlementResponseInfo) SetErrors(v []APIError)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *EntitlementResponseInfo) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
 
 ### GetStatusCode
 

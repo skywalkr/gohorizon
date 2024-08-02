@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Certificate** | Pointer to **string** | Virtual Center certificate | [optional] 
-**Type** | Pointer to **string** | Type of Certificate. * PEM: PEM encoded certificate type | [optional] 
+**Type** | Pointer to **string** | Type of Certificate. * PEM: PEM encoded certificate type * UNKNOWN: Unknown certificate type | [optional] 
 
 ## Methods
 

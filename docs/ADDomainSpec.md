@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdDomainAdvancedSettings** | Pointer to [**ADDomainAdvancedSettings**](ADDomainAdvancedSettings.md) |  | [optional] 
+**AdDomainAdvancedSettings** | [**ADDomainAdvancedSettings**](ADDomainAdvancedSettings.md) |  | 
 **DnsName** | **string** | The DNS name of the domain. | 
 **NetbiosName** | **string** | The NetBIOS name of the domain. | 
-**PrimaryAccount** | Pointer to [**ServiceAccountCredentials**](ServiceAccountCredentials.md) |  | [optional] 
+**PrimaryAccount** | [**ADDomainServiceAccountSpec**](ADDomainServiceAccountSpec.md) |  | 
 
 ## Methods
 
 ### NewADDomainSpec
 
-`func NewADDomainSpec(dnsName string, netbiosName string, ) *ADDomainSpec`
+`func NewADDomainSpec(adDomainAdvancedSettings ADDomainAdvancedSettings, dnsName string, netbiosName string, primaryAccount ADDomainServiceAccountSpec, ) *ADDomainSpec`
 
 NewADDomainSpec instantiates a new ADDomainSpec object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetAdDomainAdvancedSettings sets AdDomainAdvancedSettings field to given value.
 
-### HasAdDomainAdvancedSettings
-
-`func (o *ADDomainSpec) HasAdDomainAdvancedSettings() bool`
-
-HasAdDomainAdvancedSettings returns a boolean if a field has been set.
 
 ### GetDnsName
 
@@ -95,28 +90,23 @@ SetNetbiosName sets NetbiosName field to given value.
 
 ### GetPrimaryAccount
 
-`func (o *ADDomainSpec) GetPrimaryAccount() ServiceAccountCredentials`
+`func (o *ADDomainSpec) GetPrimaryAccount() ADDomainServiceAccountSpec`
 
 GetPrimaryAccount returns the PrimaryAccount field if non-nil, zero value otherwise.
 
 ### GetPrimaryAccountOk
 
-`func (o *ADDomainSpec) GetPrimaryAccountOk() (*ServiceAccountCredentials, bool)`
+`func (o *ADDomainSpec) GetPrimaryAccountOk() (*ADDomainServiceAccountSpec, bool)`
 
 GetPrimaryAccountOk returns a tuple with the PrimaryAccount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrimaryAccount
 
-`func (o *ADDomainSpec) SetPrimaryAccount(v ServiceAccountCredentials)`
+`func (o *ADDomainSpec) SetPrimaryAccount(v ADDomainServiceAccountSpec)`
 
 SetPrimaryAccount sets PrimaryAccount field to given value.
 
-### HasPrimaryAccount
-
-`func (o *ADDomainSpec) HasPrimaryAccount() bool`
-
-HasPrimaryAccount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

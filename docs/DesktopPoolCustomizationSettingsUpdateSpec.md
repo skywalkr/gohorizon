@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdContainerRdn** | Pointer to **string** | This is required for instant clone desktop pools.&lt;br&gt;Instant Clone Engine Active Directory container for ClonePrep. | [optional] 
+**AdContainerRdn** | Pointer to **string** | Applicable To : Instant clone and Full clone desktop pools.&lt;br&gt; This is required for instant clone desktop pools.&lt;br&gt;Instant Clone Engine and Full Clone Active Directory container for ClonePrep and SysPrep respectively. | [optional] 
 **CloneprepCustomizationSettings** | Pointer to [**DesktopPoolCloneprepCustomizationSettingsUpdateSpec**](DesktopPoolCloneprepCustomizationSettingsUpdateSpec.md) |  | [optional] 
 **CustomizationType** | **string** | Type of customization to use. * NONE: Applicable To: Full clone desktop pools.&lt;br&gt;No customization. * SYS_PREP: Applicable To: Full clone desktop pools.&lt;br&gt;Microsoft Sysprep is a tool to deploy the configured operating system installation from a base image. The machine can then be customized based on an answer script. Sysprep can modify a larger number of configurable parameters than QuickPrep. * CLONE_PREP: Applicable To: Instant clone desktop pools.&lt;br&gt;ClonePrep is a VMware system tool executed by Instant Clone Engine during a instant clone machine deployment. ClonePrep personalizes each machine created from the Master image. | 
 **DoNotPowerOnVmsAfterCreation** | Pointer to **bool** | Indicates whether to power on VMs after creation. This is the settings when customization will be done manually. This property is required if customization_type is set NONE. | [optional] 
-**InstantCloneDomainAccountId** | Pointer to **string** | This is required for instant clone desktop pools.&lt;br&gt;This is the administrator which will add the machines to its domain upon creation. | [optional] 
+**InstantCloneDomainAccountId** | Pointer to **string** | Applicable To : Instant clone and Full clone desktop pools.&lt;br&gt; This is required for instant clone desktop pools.&lt;br&gt;This is the administrator which will add the machines to its domain upon creation. | [optional] 
 **ReusePreExistingAccounts** | Pointer to **bool** | Applicable To: Automated desktop pools.&lt;br&gt;Indicates whether to allow the use of existing AD computer accounts when the VM names of newly created clones match the existing computer account names. | [optional] 
 **SysprepCustomizationSpecId** | Pointer to **string** | This is required when customization_type is set as SYS_PREP.&lt;br&gt;Customization specification to use when Sysprep customization is requested. | [optional] 
 

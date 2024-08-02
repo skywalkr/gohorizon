@@ -1,35 +1,35 @@
-# \FederationApi
+# \FederationAPI
 
 All URIs are relative to *http://localhost/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateHomeSites**](FederationApi.md#CreateHomeSites) | **Post** /federation/v1/home-sites | Creates the given home sites in the pod federation.
-[**CreateSite**](FederationApi.md#CreateSite) | **Post** /federation/v1/sites | Creates a site.
-[**DeleteHomeSites**](FederationApi.md#DeleteHomeSites) | **Delete** /federation/v1/home-sites | Deletes the given home sites from the pod federation.
-[**DeleteSite**](FederationApi.md#DeleteSite) | **Delete** /federation/v1/sites/{id} | Deletes a site.
-[**EjectPod**](FederationApi.md#EjectPod) | **Post** /federation/v1/cpa/action/eject | Removes a pod from Cloud Pod Federation.
-[**GetHomeSite**](FederationApi.md#GetHomeSite) | **Get** /federation/v1/home-sites/{id} | Retrieves a given home site in the pod federation.
-[**GetPod**](FederationApi.md#GetPod) | **Get** /federation/v1/pods/{id} | Retrieves a given pod from the pod federation.
-[**GetPodAssignment**](FederationApi.md#GetPodAssignment) | **Get** /federation/v1/pod-assignments/{id} | Retrieves a given pod assignment from the pod federation.
-[**GetPodEndpoint**](FederationApi.md#GetPodEndpoint) | **Get** /federation/v1/pods/{id}/endpoints/{endpointId} | Retrieves pod endpoint details for the given pod endpoint id in the given pod.
-[**GetPodFederation**](FederationApi.md#GetPodFederation) | **Get** /federation/v1/cpa | Retrieves the pod federation details.
-[**GetSite**](FederationApi.md#GetSite) | **Get** /federation/v1/sites/{id} | Retrives a given site.
-[**GetTask**](FederationApi.md#GetTask) | **Get** /federation/v1/cpa/tasks/{id} | Retrieves the information for a given task.
-[**InitializeCPA**](FederationApi.md#InitializeCPA) | **Post** /federation/v1/cpa/action/initialize | Initialize Cloud Pod Federation.
-[**JoinCPA**](FederationApi.md#JoinCPA) | **Post** /federation/v1/cpa/action/join | Join Cloud Pod Federation.
-[**ListHomeSites**](FederationApi.md#ListHomeSites) | **Get** /federation/v1/home-sites | Lists all the home sites in the pod federation.
-[**ListPodAssignments**](FederationApi.md#ListPodAssignments) | **Get** /federation/v1/pod-assignments | Lists all the pod assignments in the pod federation.
-[**ListPodEndpoint**](FederationApi.md#ListPodEndpoint) | **Get** /federation/v1/pods/{id}/endpoints | Lists all the pod endpoints for the given pod.
-[**ListPods**](FederationApi.md#ListPods) | **Get** /federation/v1/pods | Lists all the pods in the pod federation.
-[**ListSites**](FederationApi.md#ListSites) | **Get** /federation/v1/sites | Lists all the sites in the pod federation.
-[**ListTasks**](FederationApi.md#ListTasks) | **Get** /federation/v1/cpa/tasks | Lists all the CPA tasks in the pod federation.
-[**ResolveHomeSites**](FederationApi.md#ResolveHomeSites) | **Post** /federation/v1/home-sites/action/resolve | Resolves home sites for a user in the pod federation.
-[**UninitializeCPA**](FederationApi.md#UninitializeCPA) | **Post** /federation/v1/cpa/action/uninitialize | Uninitialize Cloud Pod Federation.
-[**UnjoinCPA**](FederationApi.md#UnjoinCPA) | **Post** /federation/v1/cpa/action/unjoin | Unjoin from Cloud Pod Federation.
-[**UpdatePod**](FederationApi.md#UpdatePod) | **Put** /federation/v1/pods/{id} | Updates the given pod in the pod federation.
-[**UpdatePodFederation**](FederationApi.md#UpdatePodFederation) | **Put** /federation/v1/cpa | Updates a Pod Federation.
-[**UpdateSite**](FederationApi.md#UpdateSite) | **Put** /federation/v1/sites/{id} | Updates a site.
+[**CreateHomeSites**](FederationAPI.md#CreateHomeSites) | **Post** /federation/v1/home-sites | Creates the given home sites in the pod federation.
+[**CreateSite**](FederationAPI.md#CreateSite) | **Post** /federation/v1/sites | Creates a site.
+[**DeleteHomeSites**](FederationAPI.md#DeleteHomeSites) | **Delete** /federation/v1/home-sites | Deletes the given home sites from the pod federation.
+[**DeleteSite**](FederationAPI.md#DeleteSite) | **Delete** /federation/v1/sites/{id} | Deletes a site.
+[**EjectPod**](FederationAPI.md#EjectPod) | **Post** /federation/v1/cpa/action/eject | Removes a pod from Cloud Pod Federation.
+[**GetHomeSite**](FederationAPI.md#GetHomeSite) | **Get** /federation/v1/home-sites/{id} | Retrieves a given home site in the pod federation.
+[**GetPod**](FederationAPI.md#GetPod) | **Get** /federation/v1/pods/{id} | Retrieves a given pod from the pod federation.
+[**GetPodAssignment**](FederationAPI.md#GetPodAssignment) | **Get** /federation/v1/pod-assignments/{id} | Retrieves a given pod assignment from the pod federation.
+[**GetPodEndpoint**](FederationAPI.md#GetPodEndpoint) | **Get** /federation/v1/pods/{id}/endpoints/{endpointId} | Retrieves pod endpoint details for the given pod endpoint id in the given pod.
+[**GetPodFederation**](FederationAPI.md#GetPodFederation) | **Get** /federation/v1/cpa | Retrieves the pod federation details.
+[**GetSite**](FederationAPI.md#GetSite) | **Get** /federation/v1/sites/{id} | Retrives a given site.
+[**GetTask**](FederationAPI.md#GetTask) | **Get** /federation/v1/cpa/tasks/{id} | Retrieves the information for a given task.
+[**InitializeCPA**](FederationAPI.md#InitializeCPA) | **Post** /federation/v1/cpa/action/initialize | Initialize Cloud Pod Federation.
+[**JoinCPA**](FederationAPI.md#JoinCPA) | **Post** /federation/v1/cpa/action/join | Join Cloud Pod Federation.
+[**ListHomeSites**](FederationAPI.md#ListHomeSites) | **Get** /federation/v1/home-sites | Lists all the home sites in the pod federation.
+[**ListPodAssignments**](FederationAPI.md#ListPodAssignments) | **Get** /federation/v1/pod-assignments | Lists all the pod assignments in the pod federation.
+[**ListPodEndpoint**](FederationAPI.md#ListPodEndpoint) | **Get** /federation/v1/pods/{id}/endpoints | Lists all the pod endpoints for the given pod.
+[**ListPods**](FederationAPI.md#ListPods) | **Get** /federation/v1/pods | Lists all the pods in the pod federation.
+[**ListSites**](FederationAPI.md#ListSites) | **Get** /federation/v1/sites | Lists all the sites in the pod federation.
+[**ListTasks**](FederationAPI.md#ListTasks) | **Get** /federation/v1/cpa/tasks | Lists all the CPA tasks in the pod federation.
+[**ResolveHomeSites**](FederationAPI.md#ResolveHomeSites) | **Post** /federation/v1/home-sites/action/resolve | Resolves home sites for a user in the pod federation.
+[**UninitializeCPA**](FederationAPI.md#UninitializeCPA) | **Post** /federation/v1/cpa/action/uninitialize | Uninitialize Cloud Pod Federation.
+[**UnjoinCPA**](FederationAPI.md#UnjoinCPA) | **Post** /federation/v1/cpa/action/unjoin | Unjoin from Cloud Pod Federation.
+[**UpdatePod**](FederationAPI.md#UpdatePod) | **Put** /federation/v1/pods/{id} | Updates the given pod in the pod federation.
+[**UpdatePodFederation**](FederationAPI.md#UpdatePodFederation) | **Put** /federation/v1/cpa | Updates a Pod Federation.
+[**UpdateSite**](FederationAPI.md#UpdateSite) | **Put** /federation/v1/sites/{id} | Updates a site.
 
 
 
@@ -47,24 +47,24 @@ Creates the given home sites in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.HomeSiteCreateSpec{*openapiclient.NewHomeSiteCreateSpec("S-1-5-32-551", "32a5ea06-cd09-4609-b3e5-df8379e99c13")} // []HomeSiteCreateSpec | List of home site objects to be created.
+	body := []openapiclient.HomeSiteCreateSpec{*openapiclient.NewHomeSiteCreateSpec("S-1-5-32-551", "32a5ea06-cd09-4609-b3e5-df8379e99c13")} // []HomeSiteCreateSpec | List of home site objects to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.CreateHomeSites(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.CreateHomeSites``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CreateHomeSites`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.CreateHomeSites`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.CreateHomeSites(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.CreateHomeSites``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateHomeSites`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.CreateHomeSites`: %v\n", resp)
 }
 ```
 
@@ -113,22 +113,22 @@ Creates a site.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewSiteCreateSpec("US Site") // SiteCreateSpec | Site object to be created.
+	body := *openapiclient.NewSiteCreateSpec("US Site") // SiteCreateSpec | Site object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.CreateSite(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.CreateSite``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.FederationAPI.CreateSite(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.CreateSite``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -177,24 +177,24 @@ Deletes the given home sites from the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of home site IDs to be deleted.
+	body := []string{"Property_example"} // []string | List of home site IDs to be deleted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.DeleteHomeSites(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.DeleteHomeSites``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DeleteHomeSites`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.DeleteHomeSites`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.DeleteHomeSites(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.DeleteHomeSites``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DeleteHomeSites`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.DeleteHomeSites`: %v\n", resp)
 }
 ```
 
@@ -243,22 +243,22 @@ Deletes a site.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.DeleteSite(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.DeleteSite``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.FederationAPI.DeleteSite(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.DeleteSite``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -311,22 +311,22 @@ Removes a pod from Cloud Pod Federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewCPAEjectSpec("9e94a90d-e7c2-40b6-a702-bd781512408d") // CPAEjectSpec | The specification for removing a pod from pod federation.
+	body := *openapiclient.NewCPAEjectSpec("9e94a90d-e7c2-40b6-a702-bd781512408d") // CPAEjectSpec | The specification for removing a pod from pod federation.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.EjectPod(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.EjectPod``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.FederationAPI.EjectPod(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.EjectPod``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -375,24 +375,24 @@ Retrieves a given home site in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetHomeSite(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetHomeSite``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetHomeSite`: HomeSiteInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetHomeSite`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetHomeSite(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetHomeSite``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetHomeSite`: HomeSiteInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetHomeSite`: %v\n", resp)
 }
 ```
 
@@ -445,24 +445,24 @@ Retrieves a given pod from the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | ID of the Pod.
+	id := "id_example" // string | ID of the Pod.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetPod(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetPod``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetPod`: PodInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetPod`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetPod(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetPod``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPod`: PodInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetPod`: %v\n", resp)
 }
 ```
 
@@ -515,24 +515,24 @@ Retrieves a given pod assignment from the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetPodAssignment(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetPodAssignment``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetPodAssignment`: PodAssignmentInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetPodAssignment`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetPodAssignment(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetPodAssignment``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPodAssignment`: PodAssignmentInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetPodAssignment`: %v\n", resp)
 }
 ```
 
@@ -585,25 +585,25 @@ Retrieves pod endpoint details for the given pod endpoint id in the given pod.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    endpointId := "endpointId_example" // string | Pod endpoint ID
-    id := "id_example" // string | Pod ID
+	endpointId := "endpointId_example" // string | Pod endpoint ID
+	id := "id_example" // string | Pod ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetPodEndpoint(context.Background(), endpointId, id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetPodEndpoint``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetPodEndpoint`: PodEndpointInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetPodEndpoint`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetPodEndpoint(context.Background(), endpointId, id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetPodEndpoint``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPodEndpoint`: PodEndpointInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetPodEndpoint`: %v\n", resp)
 }
 ```
 
@@ -658,23 +658,23 @@ Retrieves the pod federation details.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetPodFederation(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetPodFederation``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetPodFederation`: PodFederationInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetPodFederation`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetPodFederation(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetPodFederation``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPodFederation`: PodFederationInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetPodFederation`: %v\n", resp)
 }
 ```
 
@@ -719,24 +719,24 @@ Retrives a given site.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetSite(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetSite``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetSite`: SiteInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetSite`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetSite(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetSite``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetSite`: SiteInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetSite`: %v\n", resp)
 }
 ```
 
@@ -789,24 +789,24 @@ Retrieves the information for a given task.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.GetTask(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.GetTask``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetTask`: TaskInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.GetTask`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.GetTask(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.GetTask``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetTask`: TaskInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.GetTask`: %v\n", resp)
 }
 ```
 
@@ -859,23 +859,23 @@ Initialize Cloud Pod Federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.InitializeCPA(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.InitializeCPA``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `InitializeCPA`: CPATaskResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.InitializeCPA`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.InitializeCPA(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.InitializeCPA``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `InitializeCPA`: CPATaskResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.InitializeCPA`: %v\n", resp)
 }
 ```
 
@@ -920,24 +920,24 @@ Join Cloud Pod Federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewCPAJoinSpec([]string{"Password_example"}, "cs1.example.com", "AD-TEST-DOMAIN\Administrator") // CPAJoinSpec | The specification for joining the pod federation.
+	body := *openapiclient.NewCPAJoinSpec([]string{"Password_example"}, "cs1.example.com", "AD-TEST-DOMAIN\Administrator") // CPAJoinSpec | The specification for joining the pod federation.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.JoinCPA(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.JoinCPA``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `JoinCPA`: CPATaskResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.JoinCPA`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.JoinCPA(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.JoinCPA``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `JoinCPA`: CPATaskResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.JoinCPA`: %v\n", resp)
 }
 ```
 
@@ -986,26 +986,26 @@ Lists all the home sites in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ListHomeSites(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ListHomeSites``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListHomeSites`: []HomeSiteInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ListHomeSites`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ListHomeSites(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ListHomeSites``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListHomeSites`: []HomeSiteInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ListHomeSites`: %v\n", resp)
 }
 ```
 
@@ -1056,26 +1056,26 @@ Lists all the pod assignments in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ListPodAssignments(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ListPodAssignments``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListPodAssignments`: []PodAssignmentInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ListPodAssignments`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ListPodAssignments(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ListPodAssignments``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListPodAssignments`: []PodAssignmentInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ListPodAssignments`: %v\n", resp)
 }
 ```
 
@@ -1126,24 +1126,24 @@ Lists all the pod endpoints for the given pod.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Pod ID
+	id := "id_example" // string | Pod ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ListPodEndpoint(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ListPodEndpoint``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListPodEndpoint`: []PodEndpointInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ListPodEndpoint`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ListPodEndpoint(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ListPodEndpoint``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListPodEndpoint`: []PodEndpointInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ListPodEndpoint`: %v\n", resp)
 }
 ```
 
@@ -1196,23 +1196,23 @@ Lists all the pods in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ListPods(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ListPods``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListPods`: []PodInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ListPods`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ListPods(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ListPods``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListPods`: []PodInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ListPods`: %v\n", resp)
 }
 ```
 
@@ -1257,23 +1257,23 @@ Lists all the sites in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ListSites(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ListSites``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListSites`: []SiteInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ListSites`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ListSites(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ListSites``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListSites`: []SiteInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ListSites`: %v\n", resp)
 }
 ```
 
@@ -1318,23 +1318,23 @@ Lists all the CPA tasks in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ListTasks(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ListTasks``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListTasks`: []TaskInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ListTasks`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ListTasks(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ListTasks``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListTasks`: []TaskInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ListTasks`: %v\n", resp)
 }
 ```
 
@@ -1379,24 +1379,24 @@ Resolves home sites for a user in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewHomeSiteResolutionSpec("S-1-5-21-3623811015-3361044348") // HomeSiteResolutionSpec | Home site specification to be resolved.
+	body := *openapiclient.NewHomeSiteResolutionSpec("S-1-5-21-3623811015-3361044348") // HomeSiteResolutionSpec | Home site specification to be resolved.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.ResolveHomeSites(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.ResolveHomeSites``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ResolveHomeSites`: []HomeSiteResolutionInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.ResolveHomeSites`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.ResolveHomeSites(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.ResolveHomeSites``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ResolveHomeSites`: []HomeSiteResolutionInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.ResolveHomeSites`: %v\n", resp)
 }
 ```
 
@@ -1445,23 +1445,23 @@ Uninitialize Cloud Pod Federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.UninitializeCPA(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.UninitializeCPA``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UninitializeCPA`: CPATaskResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.UninitializeCPA`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.UninitializeCPA(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.UninitializeCPA``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `UninitializeCPA`: CPATaskResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.UninitializeCPA`: %v\n", resp)
 }
 ```
 
@@ -1506,23 +1506,23 @@ Unjoin from Cloud Pod Federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.UnjoinCPA(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.UnjoinCPA``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UnjoinCPA`: CPATaskResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `FederationApi.UnjoinCPA`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FederationAPI.UnjoinCPA(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.UnjoinCPA``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `UnjoinCPA`: CPATaskResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `FederationAPI.UnjoinCPA`: %v\n", resp)
 }
 ```
 
@@ -1567,23 +1567,23 @@ Updates the given pod in the pod federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | ID of the Pod.
-    podUpdateSpec := *openapiclient.NewPodUpdateSpec("Cluster-CS-1", "9a892821-8c3d-4e61-9d65-69dfec7b70dc") // PodUpdateSpec | Pod object to be updated.
+	id := "id_example" // string | ID of the Pod.
+	podUpdateSpec := *openapiclient.NewPodUpdateSpec("Cluster-CS-1", "9a892821-8c3d-4e61-9d65-69dfec7b70dc") // PodUpdateSpec | Pod object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.UpdatePod(context.Background(), id).PodUpdateSpec(podUpdateSpec).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.UpdatePod``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.FederationAPI.UpdatePod(context.Background(), id).PodUpdateSpec(podUpdateSpec).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.UpdatePod``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1637,22 +1637,22 @@ Updates a Pod Federation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewCPAUpdateSpec("Horizon Cloud Pod Federation") // CPAUpdateSpec | Pod Federation object to be updated.
+	body := *openapiclient.NewCPAUpdateSpec("Horizon Cloud Pod Federation") // CPAUpdateSpec | Pod Federation object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.UpdatePodFederation(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.UpdatePodFederation``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.FederationAPI.UpdatePodFederation(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.UpdatePodFederation``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1701,23 +1701,23 @@ Updates a site.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewSiteUpdateSpec("US Site") // SiteUpdateSpec | Site object to be updated.
+	id := "id_example" // string | id
+	body := *openapiclient.NewSiteUpdateSpec("US Site") // SiteUpdateSpec | Site object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.FederationApi.UpdateSite(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FederationApi.UpdateSite``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.FederationAPI.UpdateSite(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FederationAPI.UpdateSite``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 

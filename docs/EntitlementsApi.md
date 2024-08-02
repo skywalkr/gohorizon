@@ -1,25 +1,25 @@
-# \EntitlementsApi
+# \EntitlementsAPI
 
 All URIs are relative to *http://localhost/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BulkCreateApplicationPoolEntitlements**](EntitlementsApi.md#BulkCreateApplicationPoolEntitlements) | **Post** /entitlements/v1/application-pools | Create the bulk entitlements for a set of application pools
-[**BulkCreateDesktopPoolEntitlements**](EntitlementsApi.md#BulkCreateDesktopPoolEntitlements) | **Post** /entitlements/v1/desktop-pools | Create the bulk entitlements for a set of desktop pools
-[**BulkCreateGAEEntitlements**](EntitlementsApi.md#BulkCreateGAEEntitlements) | **Post** /entitlements/v1/global-application-entitlements | Create the bulk entitlements for a set of Global Application Entitlements
-[**BulkCreateGDEEntitlements**](EntitlementsApi.md#BulkCreateGDEEntitlements) | **Post** /entitlements/v1/global-desktop-entitlements | Create the bulk entitlements for a set of Global Desktop Entitlements
-[**BulkDeleteApplicationPoolEntitlements**](EntitlementsApi.md#BulkDeleteApplicationPoolEntitlements) | **Delete** /entitlements/v1/application-pools | Delete the bulk entitlements for a set of application pools
-[**BulkDeleteDesktopPoolEntitlements**](EntitlementsApi.md#BulkDeleteDesktopPoolEntitlements) | **Delete** /entitlements/v1/desktop-pools | Delete the bulk entitlements for a set of desktop pools
-[**BulkDeleteGAEEntitlements**](EntitlementsApi.md#BulkDeleteGAEEntitlements) | **Delete** /entitlements/v1/global-application-entitlements | Delete the bulk entitlements for a set of Global Application Entitlements
-[**BulkDeleteGDEEntitlements**](EntitlementsApi.md#BulkDeleteGDEEntitlements) | **Delete** /entitlements/v1/global-desktop-entitlements | Delete the bulk entitlements for a set of Global Desktop Entitlements
-[**GetApplicationPoolEntitlements**](EntitlementsApi.md#GetApplicationPoolEntitlements) | **Get** /entitlements/v1/application-pools/{id} | Returns the IDs of users or groups entitled to a given application pool.
-[**GetDesktopPoolEntitlements**](EntitlementsApi.md#GetDesktopPoolEntitlements) | **Get** /entitlements/v1/desktop-pools/{id} | Returns the IDs of users or groups entitled to a given desktop pool.
-[**GetGAEEntitlement**](EntitlementsApi.md#GetGAEEntitlement) | **Get** /entitlements/v1/global-application-entitlements/{id} | Gets the user or group entitlements for a Global Application Entitlement.
-[**GetGDEEntitlement**](EntitlementsApi.md#GetGDEEntitlement) | **Get** /entitlements/v1/global-desktop-entitlements/{id} | Gets the user or group entitlements for a Global Desktop Entitlement.
-[**ListApplicationPoolEntitlements**](EntitlementsApi.md#ListApplicationPoolEntitlements) | **Get** /entitlements/v1/application-pools | Lists the entitlements for Application Pools in the environment.
-[**ListDesktopPoolEntitlements**](EntitlementsApi.md#ListDesktopPoolEntitlements) | **Get** /entitlements/v1/desktop-pools | Lists the entitlements for Desktop Pools in the environment.
-[**ListGAEEntitlements**](EntitlementsApi.md#ListGAEEntitlements) | **Get** /entitlements/v1/global-application-entitlements | Lists the user or group entitlements for Global Application Entitlements in the environment.
-[**ListGDEEntitlements**](EntitlementsApi.md#ListGDEEntitlements) | **Get** /entitlements/v1/global-desktop-entitlements | Lists the user or group entitlements for Global Desktop Entitlements in the environment.
+[**BulkCreateApplicationPoolEntitlements**](EntitlementsAPI.md#BulkCreateApplicationPoolEntitlements) | **Post** /entitlements/v1/application-pools | Create the bulk entitlements for a set of application pools
+[**BulkCreateDesktopPoolEntitlements**](EntitlementsAPI.md#BulkCreateDesktopPoolEntitlements) | **Post** /entitlements/v1/desktop-pools | Create the bulk entitlements for a set of desktop pools
+[**BulkCreateGAEEntitlements**](EntitlementsAPI.md#BulkCreateGAEEntitlements) | **Post** /entitlements/v1/global-application-entitlements | Create the bulk entitlements for a set of Global Application Entitlements
+[**BulkCreateGDEEntitlements**](EntitlementsAPI.md#BulkCreateGDEEntitlements) | **Post** /entitlements/v1/global-desktop-entitlements | Create the bulk entitlements for a set of Global Desktop Entitlements
+[**BulkDeleteApplicationPoolEntitlements**](EntitlementsAPI.md#BulkDeleteApplicationPoolEntitlements) | **Delete** /entitlements/v1/application-pools | Delete the bulk entitlements for a set of application pools
+[**BulkDeleteDesktopPoolEntitlements**](EntitlementsAPI.md#BulkDeleteDesktopPoolEntitlements) | **Delete** /entitlements/v1/desktop-pools | Delete the bulk entitlements for a set of desktop pools
+[**BulkDeleteGAEEntitlements**](EntitlementsAPI.md#BulkDeleteGAEEntitlements) | **Delete** /entitlements/v1/global-application-entitlements | Delete the bulk entitlements for a set of Global Application Entitlements
+[**BulkDeleteGDEEntitlements**](EntitlementsAPI.md#BulkDeleteGDEEntitlements) | **Delete** /entitlements/v1/global-desktop-entitlements | Delete the bulk entitlements for a set of Global Desktop Entitlements
+[**GetApplicationPoolEntitlements**](EntitlementsAPI.md#GetApplicationPoolEntitlements) | **Get** /entitlements/v1/application-pools/{id} | Returns the IDs of users or groups entitled to a given application pool.
+[**GetDesktopPoolEntitlements**](EntitlementsAPI.md#GetDesktopPoolEntitlements) | **Get** /entitlements/v1/desktop-pools/{id} | Returns the IDs of users or groups entitled to a given desktop pool.
+[**GetGAEEntitlement**](EntitlementsAPI.md#GetGAEEntitlement) | **Get** /entitlements/v1/global-application-entitlements/{id} | Gets the user or group entitlements for a Global Application Entitlement.
+[**GetGDEEntitlement**](EntitlementsAPI.md#GetGDEEntitlement) | **Get** /entitlements/v1/global-desktop-entitlements/{id} | Gets the user or group entitlements for a Global Desktop Entitlement.
+[**ListApplicationPoolEntitlements**](EntitlementsAPI.md#ListApplicationPoolEntitlements) | **Get** /entitlements/v1/application-pools | Lists the entitlements for Application Pools in the environment.
+[**ListDesktopPoolEntitlements**](EntitlementsAPI.md#ListDesktopPoolEntitlements) | **Get** /entitlements/v1/desktop-pools | Lists the entitlements for Desktop Pools in the environment.
+[**ListGAEEntitlements**](EntitlementsAPI.md#ListGAEEntitlements) | **Get** /entitlements/v1/global-application-entitlements | Lists the user or group entitlements for Global Application Entitlements in the environment.
+[**ListGDEEntitlements**](EntitlementsAPI.md#ListGDEEntitlements) | **Get** /entitlements/v1/global-desktop-entitlements | Lists the user or group entitlements for Global Desktop Entitlements in the environment.
 
 
 
@@ -37,24 +37,24 @@ Create the bulk entitlements for a set of application pools
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk application entitlements to be created.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk application entitlements to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkCreateApplicationPoolEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkCreateApplicationPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkCreateApplicationPoolEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkCreateApplicationPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkCreateApplicationPoolEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkCreateApplicationPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkCreateApplicationPoolEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkCreateApplicationPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -103,24 +103,24 @@ Create the bulk entitlements for a set of desktop pools
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk desktop entitlements to be created.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk desktop entitlements to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkCreateDesktopPoolEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkCreateDesktopPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkCreateDesktopPoolEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkCreateDesktopPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkCreateDesktopPoolEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkCreateDesktopPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkCreateDesktopPoolEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkCreateDesktopPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -169,24 +169,24 @@ Create the bulk entitlements for a set of Global Application Entitlements
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GAE Entitlements to be created.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GAE Entitlements to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkCreateGAEEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkCreateGAEEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkCreateGAEEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkCreateGAEEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkCreateGAEEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkCreateGAEEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkCreateGAEEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkCreateGAEEntitlements`: %v\n", resp)
 }
 ```
 
@@ -235,24 +235,24 @@ Create the bulk entitlements for a set of Global Desktop Entitlements
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GDE Entitlements to be created.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GDE Entitlements to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkCreateGDEEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkCreateGDEEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkCreateGDEEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkCreateGDEEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkCreateGDEEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkCreateGDEEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkCreateGDEEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkCreateGDEEntitlements`: %v\n", resp)
 }
 ```
 
@@ -301,24 +301,24 @@ Delete the bulk entitlements for a set of application pools
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk application entitlements to be deleted.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk application entitlements to be deleted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkDeleteApplicationPoolEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkDeleteApplicationPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkDeleteApplicationPoolEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkDeleteApplicationPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkDeleteApplicationPoolEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkDeleteApplicationPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkDeleteApplicationPoolEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkDeleteApplicationPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -367,24 +367,24 @@ Delete the bulk entitlements for a set of desktop pools
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk desktop entitlements to be deleted.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk desktop entitlements to be deleted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkDeleteDesktopPoolEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkDeleteDesktopPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkDeleteDesktopPoolEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkDeleteDesktopPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkDeleteDesktopPoolEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkDeleteDesktopPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkDeleteDesktopPoolEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkDeleteDesktopPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -433,24 +433,24 @@ Delete the bulk entitlements for a set of Global Application Entitlements
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GAE Entitlements to be Deleted.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GAE Entitlements to be Deleted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkDeleteGAEEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkDeleteGAEEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkDeleteGAEEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkDeleteGAEEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkDeleteGAEEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkDeleteGAEEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkDeleteGAEEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkDeleteGAEEntitlements`: %v\n", resp)
 }
 ```
 
@@ -499,24 +499,24 @@ Delete the bulk entitlements for a set of Global Desktop Entitlements
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GDE Entitlements to be Deleted.
+	body := []openapiclient.EntitlementSpec{*openapiclient.NewEntitlementSpec()} // []EntitlementSpec | Specifications for bulk GDE Entitlements to be Deleted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.BulkDeleteGDEEntitlements(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.BulkDeleteGDEEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `BulkDeleteGDEEntitlements`: []BulkEntitlementResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.BulkDeleteGDEEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.BulkDeleteGDEEntitlements(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.BulkDeleteGDEEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `BulkDeleteGDEEntitlements`: []BulkEntitlementResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.BulkDeleteGDEEntitlements`: %v\n", resp)
 }
 ```
 
@@ -565,24 +565,24 @@ Returns the IDs of users or groups entitled to a given application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.GetApplicationPoolEntitlements(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.GetApplicationPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetApplicationPoolEntitlements`: EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.GetApplicationPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.GetApplicationPoolEntitlements(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.GetApplicationPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetApplicationPoolEntitlements`: EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.GetApplicationPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -635,24 +635,24 @@ Returns the IDs of users or groups entitled to a given desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.GetDesktopPoolEntitlements(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.GetDesktopPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPoolEntitlements`: EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.GetDesktopPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.GetDesktopPoolEntitlements(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.GetDesktopPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolEntitlements`: EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.GetDesktopPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -705,24 +705,24 @@ Gets the user or group entitlements for a Global Application Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.GetGAEEntitlement(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.GetGAEEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetGAEEntitlement`: EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.GetGAEEntitlement`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.GetGAEEntitlement(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.GetGAEEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGAEEntitlement`: EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.GetGAEEntitlement`: %v\n", resp)
 }
 ```
 
@@ -775,24 +775,24 @@ Gets the user or group entitlements for a Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.GetGDEEntitlement(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.GetGDEEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetGDEEntitlement`: EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.GetGDEEntitlement`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.GetGDEEntitlement(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.GetGDEEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGDEEntitlement`: EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.GetGDEEntitlement`: %v\n", resp)
 }
 ```
 
@@ -845,26 +845,26 @@ Lists the entitlements for Application Pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.ListApplicationPoolEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.ListApplicationPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListApplicationPoolEntitlements`: []EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.ListApplicationPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.ListApplicationPoolEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.ListApplicationPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListApplicationPoolEntitlements`: []EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.ListApplicationPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -915,26 +915,26 @@ Lists the entitlements for Desktop Pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.ListDesktopPoolEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.ListDesktopPoolEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPoolEntitlements`: []EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.ListDesktopPoolEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.ListDesktopPoolEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.ListDesktopPoolEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolEntitlements`: []EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.ListDesktopPoolEntitlements`: %v\n", resp)
 }
 ```
 
@@ -985,26 +985,26 @@ Lists the user or group entitlements for Global Application Entitlements in the 
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.ListGAEEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.ListGAEEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListGAEEntitlements`: []EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.ListGAEEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.ListGAEEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.ListGAEEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListGAEEntitlements`: []EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.ListGAEEntitlements`: %v\n", resp)
 }
 ```
 
@@ -1055,26 +1055,26 @@ Lists the user or group entitlements for Global Desktop Entitlements in the envi
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EntitlementsApi.ListGDEEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.ListGDEEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListGDEEntitlements`: []EntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.ListGDEEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EntitlementsAPI.ListGDEEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsAPI.ListGDEEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListGDEEntitlements`: []EntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `EntitlementsAPI.ListGDEEntitlements`: %v\n", resp)
 }
 ```
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Address** | Pointer to **string** | Gateway host name or IP address. | [optional] 
 **Internal** | Pointer to **bool** | Indicates if the Gateway is internal. | [optional] 
-**Type** | Pointer to **string** | Type of the Gateway. * UAG: Unified Access Gateway type. * F5: F5 Gateway type. * UNKNOWN: Unknown type. | [optional] 
+**Type** | Pointer to **string** | Type of the Gateway. * UAG: Unified Access Gateway type. * F5: F5 Gateway type. * SG: SG type is for Security Server. * SG_COHOSTED: SG-cohosted type is for Cohosted CS as gateway. * UNKNOWN: Unknown type. | [optional] 
 **Version** | Pointer to **string** | Version of the Gateway. | [optional] 
 
 ## Methods

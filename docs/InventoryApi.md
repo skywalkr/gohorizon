@@ -1,137 +1,173 @@
-# \InventoryApi
+# \InventoryAPI
 
 All URIs are relative to *http://localhost/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddCustomIcon**](InventoryApi.md#AddCustomIcon) | **Post** /inventory/v1/application-pools/{id}/action/add-custom-icon | Associates a custom icon to the application pool.
-[**AddLocalApplicationPoolsToGAE**](InventoryApi.md#AddLocalApplicationPoolsToGAE) | **Post** /inventory/v1/global-application-entitlements/{id}/local-application-pools | Adds Local Application Pools to Global Application Entitlement.
-[**AddLocalDesktopPoolsToGDE**](InventoryApi.md#AddLocalDesktopPoolsToGDE) | **Post** /inventory/v1/global-desktop-entitlements/{id}/local-desktop-pools | Adds Local Desktop Pools to Global Desktop Entitlement.
-[**AddMachines**](InventoryApi.md#AddMachines) | **Post** /inventory/v1/desktop-pools/{id}/action/add-machines | Adds machines to the given manual desktop pool.
-[**AddMachinesByName**](InventoryApi.md#AddMachinesByName) | **Post** /inventory/v1/desktop-pools/{id}/action/add-machines-by-name | Adds the named machines to the given desktop pool.
-[**AddRdsServers**](InventoryApi.md#AddRdsServers) | **Post** /inventory/v1/farms/{id}/action/add-rds-servers | Add RDS servers to the specified manual farm.
-[**AssignMachineAliases**](InventoryApi.md#AssignMachineAliases) | **Post** /inventory/v1/machines/{id}/action/assign-aliases | Assigns the specified aliases to the assigned users of the machine.
-[**AssignUsers**](InventoryApi.md#AssignUsers) | **Post** /inventory/v1/machines/{id}/action/assign-users | Assigns the specified users to the machine.
-[**CancelDesktopPoolTask**](InventoryApi.md#CancelDesktopPoolTask) | **Post** /inventory/v1/desktop-pools/{id}/tasks/{taskId}/action/cancel | Cancels the instant clone desktop pool push image task.
-[**CancelScheduledMaintenance**](InventoryApi.md#CancelScheduledMaintenance) | **Post** /inventory/v1/farms/{id}/action/cancel-scheduled-maintenance | Requests cancellation of the current scheduled maintenance on the specified Instant Clone farm.
-[**CancelScheduledPushImage**](InventoryApi.md#CancelScheduledPushImage) | **Post** /inventory/v1/desktop-pools/{id}/action/cancel-scheduled-push-image | Request the cancellation of the current scheduled push image operation on the specified instant clone desktop pool.
-[**CheckApplicationPoolNameAvailability**](InventoryApi.md#CheckApplicationPoolNameAvailability) | **Post** /inventory/v1/application-pools/action/check-name-availability | Checks if the given name is available for application pool creation.
-[**CheckDesktopPoolNameAvailability**](InventoryApi.md#CheckDesktopPoolNameAvailability) | **Post** /inventory/v1/desktop-pools/action/check-name-availability | Checks if the given name is available for desktop pool creation.
-[**CheckFarmNameAvailability**](InventoryApi.md#CheckFarmNameAvailability) | **Post** /inventory/v1/farms/action/check-name-availability | Checks if the given name is available for farm creation.
-[**CheckMachinePrefixAvailability**](InventoryApi.md#CheckMachinePrefixAvailability) | **Post** /inventory/v1/machines/action/check-name-availability | Checks if the given prefix is available for machine creation.
-[**CheckRDSServerPrefixAvailability**](InventoryApi.md#CheckRDSServerPrefixAvailability) | **Post** /inventory/v1/rds-servers/action/check-name-availability | Checks if the given prefix is available for RDS Server creation.
-[**CreateApplicationIcon**](InventoryApi.md#CreateApplicationIcon) | **Post** /inventory/v1/application-icons | Creates an application icon.
-[**CreateApplicationPool**](InventoryApi.md#CreateApplicationPool) | **Post** /inventory/v1/application-pools | Creates an application pool.
-[**CreateApplicationPoolV2**](InventoryApi.md#CreateApplicationPoolV2) | **Post** /inventory/v2/application-pools | Creates an application pool.
-[**CreateDesktopPool**](InventoryApi.md#CreateDesktopPool) | **Post** /inventory/v1/desktop-pools | Creates a desktop pool.
-[**CreateFarm**](InventoryApi.md#CreateFarm) | **Post** /inventory/v1/farms | Creates a farm.
-[**CreateFarmV2**](InventoryApi.md#CreateFarmV2) | **Post** /inventory/v2/farms | Creates a farm.
-[**CreateGlobalApplicationEntitlement**](InventoryApi.md#CreateGlobalApplicationEntitlement) | **Post** /inventory/v1/global-application-entitlements | Creates a Global Application Entitlement.
-[**CreateGlobalDesktopEntitlement**](InventoryApi.md#CreateGlobalDesktopEntitlement) | **Post** /inventory/v1/global-desktop-entitlements | Creates a Global Desktop Entitlement.
-[**CreateGlobalDesktopEntitlementV2**](InventoryApi.md#CreateGlobalDesktopEntitlementV2) | **Post** /inventory/v2/global-desktop-entitlements | Creates a Global Desktop Entitlement.
-[**DeleteApplicationPool**](InventoryApi.md#DeleteApplicationPool) | **Delete** /inventory/v1/application-pools/{id} | Deletes application pool.
-[**DeleteDesktopPool**](InventoryApi.md#DeleteDesktopPool) | **Delete** /inventory/v1/desktop-pools/{id} | Deletes a desktop pool.
-[**DeleteFarm**](InventoryApi.md#DeleteFarm) | **Delete** /inventory/v1/farms/{id} | Deletes a farm.
-[**DeleteGlobalApplicationEntitlement**](InventoryApi.md#DeleteGlobalApplicationEntitlement) | **Delete** /inventory/v1/global-application-entitlements/{id} | Deletes a Global Application Entitlement.
-[**DeleteGlobalDesktopEntitlement**](InventoryApi.md#DeleteGlobalDesktopEntitlement) | **Delete** /inventory/v1/global-desktop-entitlements/{id} | Deletes a Global Desktop Entitlement.
-[**DeleteMachine**](InventoryApi.md#DeleteMachine) | **Delete** /inventory/v1/machines/{id} | Deletes the machine.
-[**DeleteMachines**](InventoryApi.md#DeleteMachines) | **Delete** /inventory/v1/machines | Deletes the specified machines.
-[**DeletePhysicalMachine**](InventoryApi.md#DeletePhysicalMachine) | **Delete** /inventory/v1/physical-machines/{id} | Deletes the Physical Machine.
-[**DeleteRDSServer**](InventoryApi.md#DeleteRDSServer) | **Delete** /inventory/v1/rds-servers/{id} | Deletes the RDS Server.
-[**DisconnectGlobalSessions**](InventoryApi.md#DisconnectGlobalSessions) | **Post** /inventory/v1/global-sessions/action/disconnect | Disconnects global sessions in the environment.
-[**DisconnectSessions**](InventoryApi.md#DisconnectSessions) | **Post** /inventory/v1/sessions/action/disconnect | Disconnects locally resourced user sessions.
-[**EnterMaintenance**](InventoryApi.md#EnterMaintenance) | **Post** /inventory/v1/machines/action/enter-maintenance | Puts the machines into maintenance mode.
-[**ExitMaintenance**](InventoryApi.md#ExitMaintenance) | **Post** /inventory/v1/machines/action/exit-maintenance | Puts the machines out of maintenance mode.
-[**GetApplicationIcon**](InventoryApi.md#GetApplicationIcon) | **Get** /inventory/v1/application-icons/{id} | Gets application icon.
-[**GetApplicationPool**](InventoryApi.md#GetApplicationPool) | **Get** /inventory/v1/application-pools/{id} | Gets application pool.
-[**GetApplicationPoolV2**](InventoryApi.md#GetApplicationPoolV2) | **Get** /inventory/v2/application-pools/{id} | Gets application pool.
-[**GetApplicationPoolV3**](InventoryApi.md#GetApplicationPoolV3) | **Get** /inventory/v3/application-pools/{id} | Gets application pool.
-[**GetDesktopPool**](InventoryApi.md#GetDesktopPool) | **Get** /inventory/v1/desktop-pools/{id} | Gets the Desktop Pool information.
-[**GetDesktopPoolTask**](InventoryApi.md#GetDesktopPoolTask) | **Get** /inventory/v1/desktop-pools/{id}/tasks/{taskId} | Gets the task information on the desktop pool.
-[**GetDesktopPoolV2**](InventoryApi.md#GetDesktopPoolV2) | **Get** /inventory/v2/desktop-pools/{id} | Gets the desktop pool information.
-[**GetDesktopPoolV3**](InventoryApi.md#GetDesktopPoolV3) | **Get** /inventory/v3/desktop-pools/{id} | Gets the desktop pool information.
-[**GetDesktopPoolV4**](InventoryApi.md#GetDesktopPoolV4) | **Get** /inventory/v4/desktop-pools/{id} | Gets the desktop pool information.
-[**GetDesktopPoolV5**](InventoryApi.md#GetDesktopPoolV5) | **Get** /inventory/v5/desktop-pools/{id} | Gets the desktop pool information.
-[**GetFarm**](InventoryApi.md#GetFarm) | **Get** /inventory/v1/farms/{id} | Gets the Farm information.
-[**GetFarmV2**](InventoryApi.md#GetFarmV2) | **Get** /inventory/v2/farms/{id} | Gets the Farm information.
-[**GetFarmV3**](InventoryApi.md#GetFarmV3) | **Get** /inventory/v3/farms/{id} | Gets the Farm information.
-[**GetGlobalApplicationEntitlement**](InventoryApi.md#GetGlobalApplicationEntitlement) | **Get** /inventory/v1/global-application-entitlements/{id} | Gets the Global Application Entitlement in the environment.
-[**GetGlobalApplicationEntitlementV2**](InventoryApi.md#GetGlobalApplicationEntitlementV2) | **Get** /inventory/v2/global-application-entitlements/{id} | Gets the Global Application Entitlement in the environment.
-[**GetGlobalDesktopEntitlement**](InventoryApi.md#GetGlobalDesktopEntitlement) | **Get** /inventory/v1/global-desktop-entitlements/{id} | Gets the Global Desktop Entitlement in the environment.
-[**GetGlobalDesktopEntitlementV2**](InventoryApi.md#GetGlobalDesktopEntitlementV2) | **Get** /inventory/v2/global-desktop-entitlements/{id} | Gets the Global Desktop Entitlement in the environment.
-[**GetMachine**](InventoryApi.md#GetMachine) | **Get** /inventory/v1/machines/{id} | Gets the Machine information.
-[**GetMachineV2**](InventoryApi.md#GetMachineV2) | **Get** /inventory/v2/machines/{id} | Gets the Machine information.
-[**GetPhysicalMachine**](InventoryApi.md#GetPhysicalMachine) | **Get** /inventory/v1/physical-machines/{id} | Gets the Physical Machine information.
-[**GetRDSServer**](InventoryApi.md#GetRDSServer) | **Get** /inventory/v1/rds-servers/{id} | Gets the RDS Server information.
-[**GetSessionInfo**](InventoryApi.md#GetSessionInfo) | **Get** /inventory/v1/sessions/{id} | Gets the Session information for locally resourced session.
-[**ListApplicationIcons**](InventoryApi.md#ListApplicationIcons) | **Get** /inventory/v1/application-icons | Lists the application icons for the given application pool.
-[**ListApplicationPools**](InventoryApi.md#ListApplicationPools) | **Get** /inventory/v1/application-pools | Lists the application pools in the environment.
-[**ListApplicationPoolsV2**](InventoryApi.md#ListApplicationPoolsV2) | **Get** /inventory/v2/application-pools | Lists the application pools in the environment.
-[**ListApplicationPoolsV3**](InventoryApi.md#ListApplicationPoolsV3) | **Get** /inventory/v3/application-pools | Lists the application pools in the environment.
-[**ListCompatibleBackupGAEs**](InventoryApi.md#ListCompatibleBackupGAEs) | **Get** /inventory/v1/global-application-entitlements/{id}/compatible-backup-global-application-entitlements | Lists the Global Application Entitlements that can be associated as backup Global Application Entitlement.
-[**ListCompatibleBackupGDEs**](InventoryApi.md#ListCompatibleBackupGDEs) | **Get** /inventory/v1/global-desktop-entitlements/{id}/compatible-backup-global-desktop-entitlements | Lists the Global Desktop Entitlements that can be associated as backup Global Desktop Entitlement.
-[**ListCompatibleLocalApplicationPools**](InventoryApi.md#ListCompatibleLocalApplicationPools) | **Get** /inventory/v1/global-application-entitlements/{id}/compatible-local-application-pools | Lists Local Application Pools which are compatible with Global Application Entitlement.
-[**ListCompatibleLocalDesktopPools**](InventoryApi.md#ListCompatibleLocalDesktopPools) | **Get** /inventory/v1/global-desktop-entitlements/{id}/compatible-local-desktop-pools | Lists Local Desktop Pools which are compatible with Global Desktop Entitlement.
-[**ListDesktopPoolTasks**](InventoryApi.md#ListDesktopPoolTasks) | **Get** /inventory/v1/desktop-pools/{id}/tasks | Lists the tasks on the desktop pool.
-[**ListDesktopPools**](InventoryApi.md#ListDesktopPools) | **Get** /inventory/v1/desktop-pools | Lists the Desktop Pools in the environment.
-[**ListDesktopPoolsV2**](InventoryApi.md#ListDesktopPoolsV2) | **Get** /inventory/v2/desktop-pools | Lists the desktop pools in the environment.
-[**ListDesktopPoolsV3**](InventoryApi.md#ListDesktopPoolsV3) | **Get** /inventory/v3/desktop-pools | Lists the desktop pools in the environment.
-[**ListDesktopPoolsV4**](InventoryApi.md#ListDesktopPoolsV4) | **Get** /inventory/v4/desktop-pools | Lists the desktop pools in the environment.
-[**ListDesktopPoolsV5**](InventoryApi.md#ListDesktopPoolsV5) | **Get** /inventory/v5/desktop-pools | Lists the desktop pools in the environment.
-[**ListFarms**](InventoryApi.md#ListFarms) | **Get** /inventory/v1/farms | Lists the Farms in the environment.
-[**ListFarmsV2**](InventoryApi.md#ListFarmsV2) | **Get** /inventory/v2/farms | Lists the Farms in the environment.
-[**ListFarmsV3**](InventoryApi.md#ListFarmsV3) | **Get** /inventory/v3/farms | Lists the Farms in the environment.
-[**ListGlobalApplicationEntitlements**](InventoryApi.md#ListGlobalApplicationEntitlements) | **Get** /inventory/v1/global-application-entitlements | Lists the Global Application Entitlements in the environment.
-[**ListGlobalApplicationEntitlementsV2**](InventoryApi.md#ListGlobalApplicationEntitlementsV2) | **Get** /inventory/v2/global-application-entitlements | Lists the Global Application Entitlements in the environment.
-[**ListGlobalDesktopEntitlements**](InventoryApi.md#ListGlobalDesktopEntitlements) | **Get** /inventory/v1/global-desktop-entitlements | Lists the Global Desktop Entitlements in the environment.
-[**ListGlobalDesktopEntitlementsV2**](InventoryApi.md#ListGlobalDesktopEntitlementsV2) | **Get** /inventory/v2/global-desktop-entitlements | Lists the Global Desktop Entitlements in the environment.
-[**ListInstalledApplicationsOnDesktopPool**](InventoryApi.md#ListInstalledApplicationsOnDesktopPool) | **Get** /inventory/v1/desktop-pools/{id}/installed-applications | Lists the installed applications on the given desktop pool.
-[**ListInstalledApplicationsOnFarm**](InventoryApi.md#ListInstalledApplicationsOnFarm) | **Get** /inventory/v1/farms/{id}/installed-applications | Lists the installed applications on the given farm.
-[**ListLocalApplicationPools**](InventoryApi.md#ListLocalApplicationPools) | **Get** /inventory/v1/global-application-entitlements/{id}/local-application-pools | Lists Local Application Pools which are assigned to Global Application Entitlement.
-[**ListLocalDesktopPools**](InventoryApi.md#ListLocalDesktopPools) | **Get** /inventory/v1/global-desktop-entitlements/{id}/local-desktop-pools | Lists Local Desktop Pools which are assigned to Global Desktop Entitlement.
-[**ListMachines**](InventoryApi.md#ListMachines) | **Get** /inventory/v1/machines | Lists the Machines in the environment.
-[**ListMachinesV2**](InventoryApi.md#ListMachinesV2) | **Get** /inventory/v2/machines | Lists the Machines in the environment.
-[**ListPhysicalMachines**](InventoryApi.md#ListPhysicalMachines) | **Get** /inventory/v1/physical-machines | Lists the Physical Machines in the environment.
-[**ListRDSServers**](InventoryApi.md#ListRDSServers) | **Get** /inventory/v1/rds-servers | Lists the RDS Servers in the environment.
-[**ListSessionInfo**](InventoryApi.md#ListSessionInfo) | **Get** /inventory/v1/sessions | Lists the locally resourced Sessions in the environment
-[**LogOffGlobalSessions**](InventoryApi.md#LogOffGlobalSessions) | **Post** /inventory/v1/global-sessions/action/logoff | Logs off global sessions in the environment.
-[**LogOffSessions**](InventoryApi.md#LogOffSessions) | **Post** /inventory/v1/sessions/action/logoff | Logs off locally resourced user sessions, if they are not locked.
-[**PauseDesktopPoolTask**](InventoryApi.md#PauseDesktopPoolTask) | **Post** /inventory/v1/desktop-pools/{id}/tasks/{taskId}/action/pause | Pause the instant clone desktop pool push image task.
-[**QueryGlobalSessions**](InventoryApi.md#QueryGlobalSessions) | **Get** /inventory/v1/global-sessions | Lists global sessions in the environment for the given user, pod or brokering pod.
-[**RebuildMachines**](InventoryApi.md#RebuildMachines) | **Post** /inventory/v1/machines/action/rebuild | Rebuilds the specified machines.
-[**RecoverMachines**](InventoryApi.md#RecoverMachines) | **Post** /inventory/v1/machines/action/recover | Recovers the specified machines.
-[**RecoverRDSServers**](InventoryApi.md#RecoverRDSServers) | **Post** /inventory/v1/rds-servers/action/recover | Recovers the specified RDS Servers.
-[**RegisterPhysicalMachine**](InventoryApi.md#RegisterPhysicalMachine) | **Post** /inventory/v1/physical-machines/action/register | Registers the Physical Machine.
-[**RegisterRDSServer**](InventoryApi.md#RegisterRDSServer) | **Post** /inventory/v1/rds-servers/action/register | Registers the RDS Server.
-[**RemoveCustomIcon**](InventoryApi.md#RemoveCustomIcon) | **Post** /inventory/v1/application-pools/{id}/action/remove-custom-icon | Removes the associated custom icon from the application pool.
-[**RemoveLocalApplicationPoolsFromGAE**](InventoryApi.md#RemoveLocalApplicationPoolsFromGAE) | **Delete** /inventory/v1/global-application-entitlements/{id}/local-application-pools | Removes Local Application Pools from Global Application Entitlement.
-[**RemoveLocalDesktopPoolsFromGDE**](InventoryApi.md#RemoveLocalDesktopPoolsFromGDE) | **Delete** /inventory/v1/global-desktop-entitlements/{id}/local-desktop-pools | Removes Local Desktop Pools from Global Desktop Entitlement.
-[**RemoveMachines**](InventoryApi.md#RemoveMachines) | **Post** /inventory/v1/desktop-pools/{id}/action/remove-machines | Removes machines from the given manual desktop pool.
-[**RemoveRdsServers**](InventoryApi.md#RemoveRdsServers) | **Post** /inventory/v1/farms/{id}/action/remove-rds-servers | Remove RDS servers from the specified farm.
-[**ResetGlobalSessions**](InventoryApi.md#ResetGlobalSessions) | **Post** /inventory/v1/global-sessions/action/reset | Resets machines of global sessions in the environment.
-[**ResetMachines**](InventoryApi.md#ResetMachines) | **Post** /inventory/v1/machines/action/reset | Resets the specified machines.
-[**ResetSessions**](InventoryApi.md#ResetSessions) | **Post** /inventory/v1/sessions/action/reset | Resets machine of locally resourced user sessions. The machine must be managed by Virtual Center and the session cannot be an application or an RDS desktop session.
-[**RestartGlobalSessions**](InventoryApi.md#RestartGlobalSessions) | **Post** /inventory/v1/global-sessions/action/restart | Restarts machines of global sessions in the environment.
-[**RestartMachines**](InventoryApi.md#RestartMachines) | **Post** /inventory/v1/machines/action/restart | Restarts the specified machines.
-[**RestartSessions**](InventoryApi.md#RestartSessions) | **Post** /inventory/v1/sessions/action/restart | Restarts machine of locally resourced user sessions. The machine must be managed by Virtual Center and the session cannot be an application or an RDS desktop session.
-[**ResumeDesktopPoolTask**](InventoryApi.md#ResumeDesktopPoolTask) | **Post** /inventory/v1/desktop-pools/{id}/tasks/{taskId}/action/resume | Resume the instant clone desktop pool push image task.
-[**ScheduleMaintenance**](InventoryApi.md#ScheduleMaintenance) | **Post** /inventory/v1/farms/{id}/action/schedule-maintenance | Creates maintenance schedule for the specified farm.
-[**SchedulePushImage**](InventoryApi.md#SchedulePushImage) | **Post** /inventory/v1/desktop-pools/{id}/action/schedule-push-image | Schedule/reschedule a request to update the image in an instant clone desktop pool.
-[**SendMessageToGlobalSessions**](InventoryApi.md#SendMessageToGlobalSessions) | **Post** /inventory/v1/global-sessions/action/send-message | Sends message to global sessions in the environment.
-[**SendMessageToSessions**](InventoryApi.md#SendMessageToSessions) | **Post** /inventory/v1/sessions/action/send-message | Sends the message to locally resourced user sessions.
-[**UnassignMachineAliases**](InventoryApi.md#UnassignMachineAliases) | **Post** /inventory/v1/machines/{id}/action/unassign-aliases | Un-assigns the aliases for the specified users from the machine.
-[**UnassignUsers**](InventoryApi.md#UnassignUsers) | **Post** /inventory/v1/machines/{id}/action/unassign-users | Un-assigns the specified users from the machine.
-[**UpdateApplicationPool**](InventoryApi.md#UpdateApplicationPool) | **Put** /inventory/v1/application-pools/{id} | Updates application pool.
-[**UpdateApplicationPoolV2**](InventoryApi.md#UpdateApplicationPoolV2) | **Put** /inventory/v2/application-pools/{id} | Updates application pool.
-[**UpdateDesktopPool**](InventoryApi.md#UpdateDesktopPool) | **Put** /inventory/v1/desktop-pools/{id} | Updates desktop pool.
-[**UpdateFarm**](InventoryApi.md#UpdateFarm) | **Put** /inventory/v1/farms/{id} | Updates farm.
-[**UpdateFarmV2**](InventoryApi.md#UpdateFarmV2) | **Put** /inventory/v2/farms/{id} | Updates farm.
-[**UpdateGlobalApplicationEntitlement**](InventoryApi.md#UpdateGlobalApplicationEntitlement) | **Put** /inventory/v1/global-application-entitlements/{id} | Updates a Global Application Entitlement.
-[**UpdateGlobalDesktopEntitlement**](InventoryApi.md#UpdateGlobalDesktopEntitlement) | **Put** /inventory/v1/global-desktop-entitlements/{id} | Updates a Global Desktop Entitlement.
-[**UpdateRDSServer**](InventoryApi.md#UpdateRDSServer) | **Put** /inventory/v1/rds-servers/{id} | Updates the RDS Server.
-[**ValidateInstalledApplicationsOnDesktopPool**](InventoryApi.md#ValidateInstalledApplicationsOnDesktopPool) | **Post** /inventory/v1/desktop-pools/{id}/action/validate-installed-applications | Validates that each application in the given list is installed on the machines belonging to the specified desktop pool.
-[**ValidateInstalledApplicationsOnFarm**](InventoryApi.md#ValidateInstalledApplicationsOnFarm) | **Post** /inventory/v1/farms/{id}/action/validate-installed-applications | Validates that each application in the given list is installed on the RDS Servers belonging to the specified Farm.
-[**ValidateSpecifiedNames**](InventoryApi.md#ValidateSpecifiedNames) | **Post** /inventory/v1/desktop-pools/action/validate-specified-names | Validates manually specified virtual machines. Ensures machine and user names are valid and aren&#39;t duplicated in the given desktop pool.
+[**AddCustomIcon**](InventoryAPI.md#AddCustomIcon) | **Post** /inventory/v1/application-pools/{id}/action/add-custom-icon | Associates a custom icon to the application pool.
+[**AddLocalApplicationPoolsToGAE**](InventoryAPI.md#AddLocalApplicationPoolsToGAE) | **Post** /inventory/v1/global-application-entitlements/{id}/local-application-pools | Adds Local Application Pools to Global Application Entitlement.
+[**AddLocalDesktopPoolsToGDE**](InventoryAPI.md#AddLocalDesktopPoolsToGDE) | **Post** /inventory/v1/global-desktop-entitlements/{id}/local-desktop-pools | Adds Local Desktop Pools to Global Desktop Entitlement.
+[**AddMachines**](InventoryAPI.md#AddMachines) | **Post** /inventory/v1/desktop-pools/{id}/action/add-machines | Adds machines to the given manual desktop pool.
+[**AddMachinesByName**](InventoryAPI.md#AddMachinesByName) | **Post** /inventory/v1/desktop-pools/{id}/action/add-machines-by-name | Adds the named machines to the given desktop pool.
+[**AddRdsServers**](InventoryAPI.md#AddRdsServers) | **Post** /inventory/v1/farms/{id}/action/add-rds-servers | Add RDS servers to the specified manual farm.
+[**ArchiveMachines**](InventoryAPI.md#ArchiveMachines) | **Post** /inventory/v1/machines/action/archive | Initiates machine archival process
+[**AssignMachineAliases**](InventoryAPI.md#AssignMachineAliases) | **Post** /inventory/v1/machines/{id}/action/assign-aliases | Assigns the specified aliases to the assigned users of the machine.
+[**AssignUsers**](InventoryAPI.md#AssignUsers) | **Post** /inventory/v1/machines/{id}/action/assign-users | Assigns the specified users to the machine.
+[**CancelAgentUpgrades**](InventoryAPI.md#CancelAgentUpgrades) | **Post** /inventory/v1/machines/action/cancel-agent-upgrade | cancel agent upgrades.
+[**CancelDesktopPoolTask**](InventoryAPI.md#CancelDesktopPoolTask) | **Post** /inventory/v1/desktop-pools/{id}/tasks/{taskId}/action/cancel | Cancels the instant clone desktop pool push image task.
+[**CancelScheduledMaintenance**](InventoryAPI.md#CancelScheduledMaintenance) | **Post** /inventory/v1/farms/{id}/action/cancel-scheduled-maintenance | Requests cancellation of the current scheduled maintenance on the specified Instant Clone farm.
+[**CancelScheduledPushImage**](InventoryAPI.md#CancelScheduledPushImage) | **Post** /inventory/v1/desktop-pools/{id}/action/cancel-scheduled-push-image | Request the cancellation of the current scheduled push image operation on the specified instant clone desktop pool.
+[**CheckApplicationPoolNameAvailability**](InventoryAPI.md#CheckApplicationPoolNameAvailability) | **Post** /inventory/v1/application-pools/action/check-name-availability | Checks if the given name is available for application pool creation.
+[**CheckDesktopPoolNameAvailability**](InventoryAPI.md#CheckDesktopPoolNameAvailability) | **Post** /inventory/v1/desktop-pools/action/check-name-availability | Checks if the given name is available for desktop pool creation.
+[**CheckFarmNameAvailability**](InventoryAPI.md#CheckFarmNameAvailability) | **Post** /inventory/v1/farms/action/check-name-availability | Checks if the given name is available for farm creation.
+[**CheckMachinePrefixAvailability**](InventoryAPI.md#CheckMachinePrefixAvailability) | **Post** /inventory/v1/machines/action/check-name-availability | Checks if the given prefix is available for machine creation.
+[**CheckRDSServerPrefixAvailability**](InventoryAPI.md#CheckRDSServerPrefixAvailability) | **Post** /inventory/v1/rds-servers/action/check-name-availability | Checks if the given prefix is available for RDS Server creation.
+[**CreateApplicationIcon**](InventoryAPI.md#CreateApplicationIcon) | **Post** /inventory/v1/application-icons | Creates an application icon.
+[**CreateApplicationPool**](InventoryAPI.md#CreateApplicationPool) | **Post** /inventory/v1/application-pools | Creates an application pool.
+[**CreateApplicationPoolV2**](InventoryAPI.md#CreateApplicationPoolV2) | **Post** /inventory/v2/application-pools | Creates an application pool.
+[**CreateApplicationPoolV3**](InventoryAPI.md#CreateApplicationPoolV3) | **Post** /inventory/v3/application-pools | Creates an application pool.
+[**CreateDesktopPool**](InventoryAPI.md#CreateDesktopPool) | **Post** /inventory/v1/desktop-pools | Creates a desktop pool.
+[**CreateDesktopPoolV2**](InventoryAPI.md#CreateDesktopPoolV2) | **Post** /inventory/v2/desktop-pools | Creates a desktop pool.
+[**CreateFarm**](InventoryAPI.md#CreateFarm) | **Post** /inventory/v1/farms | Creates a farm.
+[**CreateFarmV2**](InventoryAPI.md#CreateFarmV2) | **Post** /inventory/v2/farms | Creates a farm.
+[**CreateFarmV3**](InventoryAPI.md#CreateFarmV3) | **Post** /inventory/v3/farms | Creates a farm.
+[**CreateGlobalApplicationEntitlement**](InventoryAPI.md#CreateGlobalApplicationEntitlement) | **Post** /inventory/v1/global-application-entitlements | Creates a Global Application Entitlement.
+[**CreateGlobalDesktopEntitlement**](InventoryAPI.md#CreateGlobalDesktopEntitlement) | **Post** /inventory/v1/global-desktop-entitlements | Creates a Global Desktop Entitlement.
+[**CreateGlobalDesktopEntitlementV2**](InventoryAPI.md#CreateGlobalDesktopEntitlementV2) | **Post** /inventory/v2/global-desktop-entitlements | Creates a Global Desktop Entitlement.
+[**DeleteApplicationPool**](InventoryAPI.md#DeleteApplicationPool) | **Delete** /inventory/v1/application-pools/{id} | Deletes application pool.
+[**DeleteDesktopPool**](InventoryAPI.md#DeleteDesktopPool) | **Delete** /inventory/v1/desktop-pools/{id} | Deletes a desktop pool.
+[**DeleteFarm**](InventoryAPI.md#DeleteFarm) | **Delete** /inventory/v1/farms/{id} | Deletes a farm.
+[**DeleteGlobalApplicationEntitlement**](InventoryAPI.md#DeleteGlobalApplicationEntitlement) | **Delete** /inventory/v1/global-application-entitlements/{id} | Deletes a Global Application Entitlement.
+[**DeleteGlobalDesktopEntitlement**](InventoryAPI.md#DeleteGlobalDesktopEntitlement) | **Delete** /inventory/v1/global-desktop-entitlements/{id} | Deletes a Global Desktop Entitlement.
+[**DeleteMachine**](InventoryAPI.md#DeleteMachine) | **Delete** /inventory/v1/machines/{id} | Deletes the machine.
+[**DeleteMachines**](InventoryAPI.md#DeleteMachines) | **Delete** /inventory/v1/machines | Deletes the specified machines.
+[**DeletePhysicalMachine**](InventoryAPI.md#DeletePhysicalMachine) | **Delete** /inventory/v1/physical-machines/{id} | Deletes the Physical Machine.
+[**DeleteRDSServer**](InventoryAPI.md#DeleteRDSServer) | **Delete** /inventory/v1/rds-servers/{id} | Deletes the RDS Server.
+[**DesktopPoolApplyImage**](InventoryAPI.md#DesktopPoolApplyImage) | **Post** /inventory/v1/desktop-pools/{id}/action/apply-image | Applies the pending image or the current image to selected machines in the desktop pool.
+[**DesktopPoolPromotePendingImage**](InventoryAPI.md#DesktopPoolPromotePendingImage) | **Post** /inventory/v1/desktop-pools/{id}/action/promote-pending-image | Promotes pending image to current image in the desktop pool.
+[**DisconnectGlobalSessions**](InventoryAPI.md#DisconnectGlobalSessions) | **Post** /inventory/v1/global-sessions/action/disconnect | Disconnects global sessions in the environment.
+[**DisconnectSessions**](InventoryAPI.md#DisconnectSessions) | **Post** /inventory/v1/sessions/action/disconnect | Disconnects locally resourced user sessions.
+[**EnterMaintenance**](InventoryAPI.md#EnterMaintenance) | **Post** /inventory/v1/machines/action/enter-maintenance | Puts the machines into maintenance mode.
+[**ExitMaintenance**](InventoryAPI.md#ExitMaintenance) | **Post** /inventory/v1/machines/action/exit-maintenance | Puts the machines out of maintenance mode.
+[**FarmApplyImage**](InventoryAPI.md#FarmApplyImage) | **Post** /inventory/v1/farms/{id}/action/apply-image | Applies the pending image or the current image to selected RDS servers in the farm.
+[**FarmPromotePendingImage**](InventoryAPI.md#FarmPromotePendingImage) | **Post** /inventory/v1/farms/{id}/action/promote-pending-image | Promotes pending image to current image in the farm.
+[**GetAgentInstallerPackage**](InventoryAPI.md#GetAgentInstallerPackage) | **Get** /inventory/v1/agent-installer-packages/{id} | Retrieves an agent installer package.
+[**GetAgentUpgradeTask**](InventoryAPI.md#GetAgentUpgradeTask) | **Get** /inventory/v1/machines/agent-upgrade-tasks/{id} | Get agent upgrade task information.
+[**GetApplicationIcon**](InventoryAPI.md#GetApplicationIcon) | **Get** /inventory/v1/application-icons/{id} | Gets application icon.
+[**GetApplicationPool**](InventoryAPI.md#GetApplicationPool) | **Get** /inventory/v1/application-pools/{id} | Gets application pool.
+[**GetApplicationPoolV2**](InventoryAPI.md#GetApplicationPoolV2) | **Get** /inventory/v2/application-pools/{id} | Gets application pool.
+[**GetApplicationPoolV3**](InventoryAPI.md#GetApplicationPoolV3) | **Get** /inventory/v3/application-pools/{id} | Gets application pool.
+[**GetApplicationPoolV4**](InventoryAPI.md#GetApplicationPoolV4) | **Get** /inventory/v4/application-pools/{id} | Gets application pool.
+[**GetDesktopPool**](InventoryAPI.md#GetDesktopPool) | **Get** /inventory/v1/desktop-pools/{id} | Gets the Desktop Pool information.
+[**GetDesktopPoolTask**](InventoryAPI.md#GetDesktopPoolTask) | **Get** /inventory/v1/desktop-pools/{id}/tasks/{taskId} | Gets the task information on the desktop pool.
+[**GetDesktopPoolV2**](InventoryAPI.md#GetDesktopPoolV2) | **Get** /inventory/v2/desktop-pools/{id} | Gets the desktop pool information.
+[**GetDesktopPoolV3**](InventoryAPI.md#GetDesktopPoolV3) | **Get** /inventory/v3/desktop-pools/{id} | Gets the desktop pool information.
+[**GetDesktopPoolV4**](InventoryAPI.md#GetDesktopPoolV4) | **Get** /inventory/v4/desktop-pools/{id} | Gets the desktop pool information.
+[**GetDesktopPoolV5**](InventoryAPI.md#GetDesktopPoolV5) | **Get** /inventory/v5/desktop-pools/{id} | Gets the desktop pool information.
+[**GetDesktopPoolV6**](InventoryAPI.md#GetDesktopPoolV6) | **Get** /inventory/v6/desktop-pools/{id} | Gets the desktop pool information.
+[**GetFarm**](InventoryAPI.md#GetFarm) | **Get** /inventory/v1/farms/{id} | Gets the Farm information.
+[**GetFarmV2**](InventoryAPI.md#GetFarmV2) | **Get** /inventory/v2/farms/{id} | Gets the Farm information.
+[**GetFarmV3**](InventoryAPI.md#GetFarmV3) | **Get** /inventory/v3/farms/{id} | Gets the Farm information.
+[**GetFarmV4**](InventoryAPI.md#GetFarmV4) | **Get** /inventory/v4/farms/{id} | Gets the Farm information.
+[**GetFarmV5**](InventoryAPI.md#GetFarmV5) | **Get** /inventory/v5/farms/{id} | Gets the Farm information.
+[**GetGlobalApplicationEntitlement**](InventoryAPI.md#GetGlobalApplicationEntitlement) | **Get** /inventory/v1/global-application-entitlements/{id} | Gets the Global Application Entitlement in the environment.
+[**GetGlobalApplicationEntitlementV2**](InventoryAPI.md#GetGlobalApplicationEntitlementV2) | **Get** /inventory/v2/global-application-entitlements/{id} | Gets the Global Application Entitlement in the environment.
+[**GetGlobalDesktopEntitlement**](InventoryAPI.md#GetGlobalDesktopEntitlement) | **Get** /inventory/v1/global-desktop-entitlements/{id} | Gets the Global Desktop Entitlement in the environment.
+[**GetGlobalDesktopEntitlementV2**](InventoryAPI.md#GetGlobalDesktopEntitlementV2) | **Get** /inventory/v2/global-desktop-entitlements/{id} | Gets the Global Desktop Entitlement in the environment.
+[**GetMachine**](InventoryAPI.md#GetMachine) | **Get** /inventory/v1/machines/{id} | Gets the Machine information.
+[**GetMachineV2**](InventoryAPI.md#GetMachineV2) | **Get** /inventory/v2/machines/{id} | Gets the Machine information.
+[**GetMachineV3**](InventoryAPI.md#GetMachineV3) | **Get** /inventory/v3/machines/{id} | Gets the Machine information.
+[**GetMachineV4**](InventoryAPI.md#GetMachineV4) | **Get** /inventory/v4/machines/{id} | Gets the Machine information.
+[**GetPhysicalMachine**](InventoryAPI.md#GetPhysicalMachine) | **Get** /inventory/v1/physical-machines/{id} | Gets the Physical Machine information.
+[**GetPhysicalMachineV2**](InventoryAPI.md#GetPhysicalMachineV2) | **Get** /inventory/v2/physical-machines/{id} | Gets the Physical Machine information.
+[**GetRDSServer**](InventoryAPI.md#GetRDSServer) | **Get** /inventory/v1/rds-servers/{id} | Gets the RDS Server information.
+[**GetSessionInfo**](InventoryAPI.md#GetSessionInfo) | **Get** /inventory/v1/sessions/{id} | Gets the Session information for locally resourced session.
+[**ListAgentInstallerPackages**](InventoryAPI.md#ListAgentInstallerPackages) | **Get** /inventory/v1/agent-installer-packages | Lists agent installer packages.
+[**ListAgentUpgradeTasks**](InventoryAPI.md#ListAgentUpgradeTasks) | **Get** /inventory/v1/machines/agent-upgrade-tasks | List agent upgrade tasks information.
+[**ListAppVolumesApplicationsOnFarm**](InventoryAPI.md#ListAppVolumesApplicationsOnFarm) | **Get** /inventory/v1/farms/{id}/app-volumes-applications | Lists the App Volumes applications on the given farm.
+[**ListApplicationIcons**](InventoryAPI.md#ListApplicationIcons) | **Get** /inventory/v1/application-icons | Lists the application icons for the given application pool.
+[**ListApplicationPools**](InventoryAPI.md#ListApplicationPools) | **Get** /inventory/v1/application-pools | Lists the application pools in the environment.
+[**ListApplicationPoolsV2**](InventoryAPI.md#ListApplicationPoolsV2) | **Get** /inventory/v2/application-pools | Lists the application pools in the environment.
+[**ListApplicationPoolsV3**](InventoryAPI.md#ListApplicationPoolsV3) | **Get** /inventory/v3/application-pools | Lists the application pools in the environment.
+[**ListApplicationPoolsV4**](InventoryAPI.md#ListApplicationPoolsV4) | **Get** /inventory/v4/application-pools | Lists the application pools in the environment.
+[**ListCategoryFolders**](InventoryAPI.md#ListCategoryFolders) | **Get** /inventory/v1/category-folders | Lists the category folders.
+[**ListCompatibleBackupGAEs**](InventoryAPI.md#ListCompatibleBackupGAEs) | **Get** /inventory/v1/global-application-entitlements/{id}/compatible-backup-global-application-entitlements | Lists the Global Application Entitlements that can be associated as backup Global Application Entitlement.
+[**ListCompatibleBackupGDEs**](InventoryAPI.md#ListCompatibleBackupGDEs) | **Get** /inventory/v1/global-desktop-entitlements/{id}/compatible-backup-global-desktop-entitlements | Lists the Global Desktop Entitlements that can be associated as backup Global Desktop Entitlement.
+[**ListCompatibleLocalApplicationPools**](InventoryAPI.md#ListCompatibleLocalApplicationPools) | **Get** /inventory/v1/global-application-entitlements/{id}/compatible-local-application-pools | Lists Local Application Pools which are compatible with Global Application Entitlement.
+[**ListCompatibleLocalDesktopPools**](InventoryAPI.md#ListCompatibleLocalDesktopPools) | **Get** /inventory/v1/global-desktop-entitlements/{id}/compatible-local-desktop-pools | Lists Local Desktop Pools which are compatible with Global Desktop Entitlement.
+[**ListDesktopPoolTasks**](InventoryAPI.md#ListDesktopPoolTasks) | **Get** /inventory/v1/desktop-pools/{id}/tasks | Lists the tasks on the desktop pool.
+[**ListDesktopPools**](InventoryAPI.md#ListDesktopPools) | **Get** /inventory/v1/desktop-pools | Lists the Desktop Pools in the environment.
+[**ListDesktopPoolsV2**](InventoryAPI.md#ListDesktopPoolsV2) | **Get** /inventory/v2/desktop-pools | Lists the desktop pools in the environment.
+[**ListDesktopPoolsV3**](InventoryAPI.md#ListDesktopPoolsV3) | **Get** /inventory/v3/desktop-pools | Lists the desktop pools in the environment.
+[**ListDesktopPoolsV4**](InventoryAPI.md#ListDesktopPoolsV4) | **Get** /inventory/v4/desktop-pools | Lists the desktop pools in the environment.
+[**ListDesktopPoolsV5**](InventoryAPI.md#ListDesktopPoolsV5) | **Get** /inventory/v5/desktop-pools | Lists the desktop pools in the environment.
+[**ListDesktopPoolsV6**](InventoryAPI.md#ListDesktopPoolsV6) | **Get** /inventory/v6/desktop-pools | Lists the desktop pools in the environment.
+[**ListFarms**](InventoryAPI.md#ListFarms) | **Get** /inventory/v1/farms | Lists the Farms in the environment.
+[**ListFarmsV2**](InventoryAPI.md#ListFarmsV2) | **Get** /inventory/v2/farms | Lists the Farms in the environment.
+[**ListFarmsV3**](InventoryAPI.md#ListFarmsV3) | **Get** /inventory/v3/farms | Lists the Farms in the environment.
+[**ListFarmsV4**](InventoryAPI.md#ListFarmsV4) | **Get** /inventory/v4/farms | Lists the Farms in the environment.
+[**ListFarmsV5**](InventoryAPI.md#ListFarmsV5) | **Get** /inventory/v5/farms | Lists the Farms in the environment.
+[**ListGlobalApplicationEntitlements**](InventoryAPI.md#ListGlobalApplicationEntitlements) | **Get** /inventory/v1/global-application-entitlements | Lists the Global Application Entitlements in the environment.
+[**ListGlobalApplicationEntitlementsV2**](InventoryAPI.md#ListGlobalApplicationEntitlementsV2) | **Get** /inventory/v2/global-application-entitlements | Lists the Global Application Entitlements in the environment.
+[**ListGlobalDesktopEntitlements**](InventoryAPI.md#ListGlobalDesktopEntitlements) | **Get** /inventory/v1/global-desktop-entitlements | Lists the Global Desktop Entitlements in the environment.
+[**ListGlobalDesktopEntitlementsV2**](InventoryAPI.md#ListGlobalDesktopEntitlementsV2) | **Get** /inventory/v2/global-desktop-entitlements | Lists the Global Desktop Entitlements in the environment.
+[**ListInstalledApplicationsOnDesktopPool**](InventoryAPI.md#ListInstalledApplicationsOnDesktopPool) | **Get** /inventory/v1/desktop-pools/{id}/installed-applications | Lists the installed applications on the given desktop pool.
+[**ListInstalledApplicationsOnFarm**](InventoryAPI.md#ListInstalledApplicationsOnFarm) | **Get** /inventory/v1/farms/{id}/installed-applications | Lists the installed applications on the given farm.
+[**ListLocalApplicationPools**](InventoryAPI.md#ListLocalApplicationPools) | **Get** /inventory/v1/global-application-entitlements/{id}/local-application-pools | Lists Local Application Pools which are assigned to Global Application Entitlement.
+[**ListLocalDesktopPools**](InventoryAPI.md#ListLocalDesktopPools) | **Get** /inventory/v1/global-desktop-entitlements/{id}/local-desktop-pools | Lists Local Desktop Pools which are assigned to Global Desktop Entitlement.
+[**ListMachines**](InventoryAPI.md#ListMachines) | **Get** /inventory/v1/machines | Lists the Machines in the environment.
+[**ListMachinesV2**](InventoryAPI.md#ListMachinesV2) | **Get** /inventory/v2/machines | Lists the Machines in the environment.
+[**ListMachinesV3**](InventoryAPI.md#ListMachinesV3) | **Get** /inventory/v3/machines | Lists the Machines in the environment.
+[**ListMachinesV4**](InventoryAPI.md#ListMachinesV4) | **Get** /inventory/v4/machines | Lists the Machines in the environment.
+[**ListPhysicalMachines**](InventoryAPI.md#ListPhysicalMachines) | **Get** /inventory/v1/physical-machines | Lists the Physical Machines in the environment.
+[**ListPhysicalMachinesV2**](InventoryAPI.md#ListPhysicalMachinesV2) | **Get** /inventory/v2/physical-machines | Lists the Physical Machines in the environment.
+[**ListRDSServers**](InventoryAPI.md#ListRDSServers) | **Get** /inventory/v1/rds-servers | Lists the RDS Servers in the environment.
+[**ListSessionInfo**](InventoryAPI.md#ListSessionInfo) | **Get** /inventory/v1/sessions | Lists the locally resourced Sessions in the environment
+[**LogOffGlobalSessions**](InventoryAPI.md#LogOffGlobalSessions) | **Post** /inventory/v1/global-sessions/action/logoff | Logs off global sessions in the environment.
+[**LogOffSessions**](InventoryAPI.md#LogOffSessions) | **Post** /inventory/v1/sessions/action/logoff | Logs off locally resourced user sessions, if they are not locked.
+[**PauseDesktopPoolTask**](InventoryAPI.md#PauseDesktopPoolTask) | **Post** /inventory/v1/desktop-pools/{id}/tasks/{taskId}/action/pause | Pause the instant clone desktop pool push image task.
+[**QueryGlobalSessions**](InventoryAPI.md#QueryGlobalSessions) | **Get** /inventory/v1/global-sessions | Lists global sessions in the environment for the given user, pod or brokering pod.
+[**RebuildMachines**](InventoryAPI.md#RebuildMachines) | **Post** /inventory/v1/machines/action/rebuild | Rebuilds the specified machines.
+[**RecoverMachines**](InventoryAPI.md#RecoverMachines) | **Post** /inventory/v1/machines/action/recover | Recovers the specified machines.
+[**RecoverRDSServers**](InventoryAPI.md#RecoverRDSServers) | **Post** /inventory/v1/rds-servers/action/recover | Recovers the specified RDS Servers.
+[**RegisterAgentInstallerPackage**](InventoryAPI.md#RegisterAgentInstallerPackage) | **Post** /inventory/v1/agent-installer-packages/action/register | Registers an agent installer package.
+[**RegisterPhysicalMachine**](InventoryAPI.md#RegisterPhysicalMachine) | **Post** /inventory/v1/physical-machines/action/register | Registers the Physical Machine.
+[**RegisterRDSServer**](InventoryAPI.md#RegisterRDSServer) | **Post** /inventory/v1/rds-servers/action/register | Registers the RDS Server.
+[**RemoveCustomIcon**](InventoryAPI.md#RemoveCustomIcon) | **Post** /inventory/v1/application-pools/{id}/action/remove-custom-icon | Removes the associated custom icon from the application pool.
+[**RemoveLocalApplicationPoolsFromGAE**](InventoryAPI.md#RemoveLocalApplicationPoolsFromGAE) | **Delete** /inventory/v1/global-application-entitlements/{id}/local-application-pools | Removes Local Application Pools from Global Application Entitlement.
+[**RemoveLocalDesktopPoolsFromGDE**](InventoryAPI.md#RemoveLocalDesktopPoolsFromGDE) | **Delete** /inventory/v1/global-desktop-entitlements/{id}/local-desktop-pools | Removes Local Desktop Pools from Global Desktop Entitlement.
+[**RemoveMachines**](InventoryAPI.md#RemoveMachines) | **Post** /inventory/v1/desktop-pools/{id}/action/remove-machines | Removes machines from the given manual desktop pool.
+[**RemoveRdsServers**](InventoryAPI.md#RemoveRdsServers) | **Post** /inventory/v1/farms/{id}/action/remove-rds-servers | Remove RDS servers from the specified farm.
+[**ResetGlobalSessions**](InventoryAPI.md#ResetGlobalSessions) | **Post** /inventory/v1/global-sessions/action/reset | Resets machines of global sessions in the environment.
+[**ResetMachines**](InventoryAPI.md#ResetMachines) | **Post** /inventory/v1/machines/action/reset | Resets the specified machines.
+[**ResetSessions**](InventoryAPI.md#ResetSessions) | **Post** /inventory/v1/sessions/action/reset | Resets machine of locally resourced user sessions. The machine must be managed by Virtual Center and the session cannot be an application or an RDS desktop session.
+[**RestartGlobalSessions**](InventoryAPI.md#RestartGlobalSessions) | **Post** /inventory/v1/global-sessions/action/restart | Restarts machines of global sessions in the environment.
+[**RestartMachines**](InventoryAPI.md#RestartMachines) | **Post** /inventory/v1/machines/action/restart | Restarts the specified machines.
+[**RestartSessions**](InventoryAPI.md#RestartSessions) | **Post** /inventory/v1/sessions/action/restart | Restarts machine of locally resourced user sessions. The machine must be managed by Virtual Center and the session cannot be an application or an RDS desktop session.
+[**ResumeDesktopPoolTask**](InventoryAPI.md#ResumeDesktopPoolTask) | **Post** /inventory/v1/desktop-pools/{id}/tasks/{taskId}/action/resume | Resume the instant clone desktop pool push image task.
+[**ScheduleAgentForUpgrade**](InventoryAPI.md#ScheduleAgentForUpgrade) | **Post** /inventory/v1/machines/action/schedule-agent-upgrade | Schedule agents for upgrade.
+[**ScheduleMaintenance**](InventoryAPI.md#ScheduleMaintenance) | **Post** /inventory/v1/farms/{id}/action/schedule-maintenance | Creates maintenance schedule for the specified farm.
+[**ScheduleMaintenanceV2**](InventoryAPI.md#ScheduleMaintenanceV2) | **Post** /inventory/v2/farms/{id}/action/schedule-maintenance | Creates maintenance schedule for the specified farm.
+[**SchedulePushImage**](InventoryAPI.md#SchedulePushImage) | **Post** /inventory/v1/desktop-pools/{id}/action/schedule-push-image | Schedule/reschedule a request to update the image in an instant clone desktop pool.
+[**SchedulePushImageV2**](InventoryAPI.md#SchedulePushImageV2) | **Post** /inventory/v2/desktop-pools/{id}/action/schedule-push-image | Schedule/reschedule a request to update the image in an instant clone desktop pool.
+[**SendMessageToGlobalSessions**](InventoryAPI.md#SendMessageToGlobalSessions) | **Post** /inventory/v1/global-sessions/action/send-message | Sends message to global sessions in the environment.
+[**SendMessageToSessions**](InventoryAPI.md#SendMessageToSessions) | **Post** /inventory/v1/sessions/action/send-message | Sends the message to locally resourced user sessions.
+[**UnassignMachineAliases**](InventoryAPI.md#UnassignMachineAliases) | **Post** /inventory/v1/machines/{id}/action/unassign-aliases | Un-assigns the aliases for the specified users from the machine.
+[**UnassignUsers**](InventoryAPI.md#UnassignUsers) | **Post** /inventory/v1/machines/{id}/action/unassign-users | Un-assigns the specified users from the machine.
+[**UnregisterAgentInstallerPackage**](InventoryAPI.md#UnregisterAgentInstallerPackage) | **Post** /inventory/v1/agent-installer-packages/{id}/action/unregister | Unregisters an agent installer package.
+[**UpdateApplicationPool**](InventoryAPI.md#UpdateApplicationPool) | **Put** /inventory/v1/application-pools/{id} | Updates application pool.
+[**UpdateApplicationPoolV2**](InventoryAPI.md#UpdateApplicationPoolV2) | **Put** /inventory/v2/application-pools/{id} | Updates application pool.
+[**UpdateApplicationPoolV3**](InventoryAPI.md#UpdateApplicationPoolV3) | **Put** /inventory/v3/application-pools/{id} | Updates application pool.
+[**UpdateDesktopPool**](InventoryAPI.md#UpdateDesktopPool) | **Put** /inventory/v1/desktop-pools/{id} | Updates desktop pool.
+[**UpdateFarm**](InventoryAPI.md#UpdateFarm) | **Put** /inventory/v1/farms/{id} | Updates farm.
+[**UpdateFarmV2**](InventoryAPI.md#UpdateFarmV2) | **Put** /inventory/v2/farms/{id} | Updates farm.
+[**UpdateFarmV3**](InventoryAPI.md#UpdateFarmV3) | **Put** /inventory/v3/farms/{id} | Updates farm.
+[**UpdateGlobalApplicationEntitlement**](InventoryAPI.md#UpdateGlobalApplicationEntitlement) | **Put** /inventory/v1/global-application-entitlements/{id} | Updates a Global Application Entitlement.
+[**UpdateGlobalDesktopEntitlement**](InventoryAPI.md#UpdateGlobalDesktopEntitlement) | **Put** /inventory/v1/global-desktop-entitlements/{id} | Updates a Global Desktop Entitlement.
+[**UpdateRDSServer**](InventoryAPI.md#UpdateRDSServer) | **Put** /inventory/v1/rds-servers/{id} | Updates the RDS Server.
+[**ValidateInstalledApplicationsOnDesktopPool**](InventoryAPI.md#ValidateInstalledApplicationsOnDesktopPool) | **Post** /inventory/v1/desktop-pools/{id}/action/validate-installed-applications | Validates that each application in the given list is installed on the machines belonging to the specified desktop pool.
+[**ValidateInstalledApplicationsOnFarm**](InventoryAPI.md#ValidateInstalledApplicationsOnFarm) | **Post** /inventory/v1/farms/{id}/action/validate-installed-applications | Validates that each application in the given list is installed on the RDS Servers belonging to the specified Farm.
+[**ValidateSpecifiedNames**](InventoryAPI.md#ValidateSpecifiedNames) | **Post** /inventory/v1/desktop-pools/action/validate-specified-names | Validates manually specified virtual machines. Ensures machine and user names are valid and aren&#39;t duplicated in the given desktop pool.
 
 
 
@@ -149,23 +185,23 @@ Associates a custom icon to the application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Application pool ID
-    body := *openapiclient.NewApplicationIconAssociateSpec("6f85b3a5-e7d0-4ad6-a1e3-37168dd1ed51") // ApplicationIconAssociateSpec | Icon id to be associated with the application pool.
+	id := "id_example" // string | Application pool ID
+	body := *openapiclient.NewApplicationIconAssociateSpec("6f85b3a5-e7d0-4ad6-a1e3-37168dd1ed51") // ApplicationIconAssociateSpec | Icon id to be associated with the application pool.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AddCustomIcon(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AddCustomIcon``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.AddCustomIcon(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AddCustomIcon``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -219,25 +255,25 @@ Adds Local Application Pools to Global Application Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of local application pool ids to be added.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of local application pool ids to be added.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AddLocalApplicationPoolsToGAE(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AddLocalApplicationPoolsToGAE``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AddLocalApplicationPoolsToGAE`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AddLocalApplicationPoolsToGAE`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AddLocalApplicationPoolsToGAE(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AddLocalApplicationPoolsToGAE``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AddLocalApplicationPoolsToGAE`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AddLocalApplicationPoolsToGAE`: %v\n", resp)
 }
 ```
 
@@ -291,25 +327,25 @@ Adds Local Desktop Pools to Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of local desktop pool ids to be added.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of local desktop pool ids to be added.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AddLocalDesktopPoolsToGDE(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AddLocalDesktopPoolsToGDE``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AddLocalDesktopPoolsToGDE`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AddLocalDesktopPoolsToGDE`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AddLocalDesktopPoolsToGDE(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AddLocalDesktopPoolsToGDE``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AddLocalDesktopPoolsToGDE`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AddLocalDesktopPoolsToGDE`: %v\n", resp)
 }
 ```
 
@@ -363,25 +399,25 @@ Adds machines to the given manual desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be added to the desktop pool.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be added to the desktop pool.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AddMachines(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AddMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AddMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AddMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AddMachines(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AddMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AddMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AddMachines`: %v\n", resp)
 }
 ```
 
@@ -435,25 +471,25 @@ Adds the named machines to the given desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []openapiclient.MachineSpecifiedName{*openapiclient.NewMachineSpecifiedName("machine1")} // []MachineSpecifiedName | List of MachineSpecifiedName representing the machines to be added to the desktop pool.
+	id := "id_example" // string | id
+	body := []openapiclient.MachineSpecifiedName{*openapiclient.NewMachineSpecifiedName("machine1")} // []MachineSpecifiedName | List of MachineSpecifiedName representing the machines to be added to the desktop pool.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AddMachinesByName(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AddMachinesByName``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AddMachinesByName`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AddMachinesByName`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AddMachinesByName(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AddMachinesByName``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AddMachinesByName`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AddMachinesByName`: %v\n", resp)
 }
 ```
 
@@ -507,25 +543,25 @@ Add RDS servers to the specified manual farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Farm ID
-    body := []string{"Property_example"} // []string | List of RDS server IDs representing the RDS servers to be added to the farm.
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Farm ID
+	body := []string{"Property_example"} // []string | List of RDS server IDs representing the RDS servers to be added to the farm.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AddRdsServers(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AddRdsServers``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AddRdsServers`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AddRdsServers`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AddRdsServers(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AddRdsServers``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AddRdsServers`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AddRdsServers`: %v\n", resp)
 }
 ```
 
@@ -565,6 +601,72 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ArchiveMachines
+
+> []BulkItemResponseInfo ArchiveMachines(ctx).Body(body).Execute()
+
+Initiates machine archival process
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := []string{"Property_example"} // []string | Set of Held Machine Ids which should be archived.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ArchiveMachines(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ArchiveMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ArchiveMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ArchiveMachines`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiArchiveMachinesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **[]string** | Set of Held Machine Ids which should be archived. | 
+
+### Return type
+
+[**[]BulkItemResponseInfo**](BulkItemResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## AssignMachineAliases
 
 > []BulkItemResponseInfo AssignMachineAliases(ctx, id).Body(body).Execute()
@@ -579,25 +681,25 @@ Assigns the specified aliases to the assigned users of the machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []openapiclient.MachineAliasSpec{*openapiclient.NewMachineAliasSpec()} // []MachineAliasSpec | List of MachineAlias. If a user is assigned to the machine we can set the corresponding aliases.
+	id := "id_example" // string | id
+	body := []openapiclient.MachineAliasSpec{*openapiclient.NewMachineAliasSpec()} // []MachineAliasSpec | List of MachineAlias. If a user is assigned to the machine we can set the corresponding aliases.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AssignMachineAliases(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AssignMachineAliases``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AssignMachineAliases`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AssignMachineAliases`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AssignMachineAliases(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AssignMachineAliases``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AssignMachineAliases`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AssignMachineAliases`: %v\n", resp)
 }
 ```
 
@@ -651,25 +753,25 @@ Assigns the specified users to the machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of User SIDs representing the users to be assigned to the machine.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of User SIDs representing the users to be assigned to the machine.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.AssignUsers(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.AssignUsers``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AssignUsers`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.AssignUsers`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.AssignUsers(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.AssignUsers``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AssignUsers`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.AssignUsers`: %v\n", resp)
 }
 ```
 
@@ -709,6 +811,72 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CancelAgentUpgrades
+
+> []BulkItemResponseInfo CancelAgentUpgrades(ctx).Body(body).Execute()
+
+cancel agent upgrades.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := []string{"Property_example"} // []string | Set of task IDs to cancel the agent upgrade.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.CancelAgentUpgrades(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CancelAgentUpgrades``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CancelAgentUpgrades`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.CancelAgentUpgrades`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCancelAgentUpgradesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **[]string** | Set of task IDs to cancel the agent upgrade. | 
+
+### Return type
+
+[**[]BulkItemResponseInfo**](BulkItemResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CancelDesktopPoolTask
 
 > CancelDesktopPoolTask(ctx, id, taskId).Execute()
@@ -723,23 +891,23 @@ Cancels the instant clone desktop pool push image task.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Desktop pool ID
-    taskId := "taskId_example" // string | Desktop pool task ID
+	id := "id_example" // string | Desktop pool ID
+	taskId := "taskId_example" // string | Desktop pool task ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CancelDesktopPoolTask(context.Background(), id, taskId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CancelDesktopPoolTask``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CancelDesktopPoolTask(context.Background(), id, taskId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CancelDesktopPoolTask``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -794,23 +962,23 @@ Requests cancellation of the current scheduled maintenance on the specified Inst
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Farm ID
-    body := *openapiclient.NewFarmCancelMaintenanceSpec("IMMEDIATE") // FarmCancelMaintenanceSpec | The specification to cancel the scheduled maintenance operation.
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Farm ID
+	body := *openapiclient.NewFarmCancelMaintenanceSpec("IMMEDIATE") // FarmCancelMaintenanceSpec | The specification to cancel the scheduled maintenance operation.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CancelScheduledMaintenance(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CancelScheduledMaintenance``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CancelScheduledMaintenance(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CancelScheduledMaintenance``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -864,22 +1032,22 @@ Request the cancellation of the current scheduled push image operation on the sp
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CancelScheduledPushImage(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CancelScheduledPushImage``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CancelScheduledPushImage(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CancelScheduledPushImage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -932,24 +1100,24 @@ Checks if the given name is available for application pool creation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
+	body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CheckApplicationPoolNameAvailability(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CheckApplicationPoolNameAvailability``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CheckApplicationPoolNameAvailability`: NameAvailabilityInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.CheckApplicationPoolNameAvailability`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.CheckApplicationPoolNameAvailability(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CheckApplicationPoolNameAvailability``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CheckApplicationPoolNameAvailability`: NameAvailabilityInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.CheckApplicationPoolNameAvailability`: %v\n", resp)
 }
 ```
 
@@ -998,24 +1166,24 @@ Checks if the given name is available for desktop pool creation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
+	body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CheckDesktopPoolNameAvailability(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CheckDesktopPoolNameAvailability``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CheckDesktopPoolNameAvailability`: NameAvailabilityInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.CheckDesktopPoolNameAvailability`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.CheckDesktopPoolNameAvailability(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CheckDesktopPoolNameAvailability``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CheckDesktopPoolNameAvailability`: NameAvailabilityInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.CheckDesktopPoolNameAvailability`: %v\n", resp)
 }
 ```
 
@@ -1064,24 +1232,24 @@ Checks if the given name is available for farm creation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
+	body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CheckFarmNameAvailability(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CheckFarmNameAvailability``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CheckFarmNameAvailability`: NameAvailabilityInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.CheckFarmNameAvailability`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.CheckFarmNameAvailability(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CheckFarmNameAvailability``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CheckFarmNameAvailability`: NameAvailabilityInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.CheckFarmNameAvailability`: %v\n", resp)
 }
 ```
 
@@ -1130,24 +1298,24 @@ Checks if the given prefix is available for machine creation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
+	body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CheckMachinePrefixAvailability(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CheckMachinePrefixAvailability``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CheckMachinePrefixAvailability`: NameAvailabilityInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.CheckMachinePrefixAvailability`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.CheckMachinePrefixAvailability(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CheckMachinePrefixAvailability``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CheckMachinePrefixAvailability`: NameAvailabilityInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.CheckMachinePrefixAvailability`: %v\n", resp)
 }
 ```
 
@@ -1196,24 +1364,24 @@ Checks if the given prefix is available for RDS Server creation.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
+	body := *openapiclient.NewNameAvailabilitySpec("Name_example") // NameAvailabilitySpec | Name Availability Spec.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CheckRDSServerPrefixAvailability(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CheckRDSServerPrefixAvailability``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CheckRDSServerPrefixAvailability`: NameAvailabilityInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.CheckRDSServerPrefixAvailability`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.CheckRDSServerPrefixAvailability(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CheckRDSServerPrefixAvailability``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CheckRDSServerPrefixAvailability`: NameAvailabilityInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.CheckRDSServerPrefixAvailability`: %v\n", resp)
 }
 ```
 
@@ -1262,22 +1430,22 @@ Creates an application icon.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewApplicationIconCreateSpec("Data_example", int64(16), int64(16)) // ApplicationIconCreateSpec | Application icon object to be created.
+	body := *openapiclient.NewApplicationIconCreateSpec(string(123), int64(16), int64(16)) // ApplicationIconCreateSpec | Application icon object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateApplicationIcon(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateApplicationIcon``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateApplicationIcon(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateApplicationIcon``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1326,22 +1494,22 @@ Creates an application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewApplicationPoolCreateSpec("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", "Firefox") // ApplicationPoolCreateSpec | Application pool object to be created.
+	body := *openapiclient.NewApplicationPoolCreateSpec("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", "Firefox") // ApplicationPoolCreateSpec | Application pool object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateApplicationPool(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateApplicationPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateApplicationPool(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateApplicationPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1390,22 +1558,22 @@ Creates an application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewApplicationPoolCreateSpecV2("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", "Firefox") // ApplicationPoolCreateSpecV2 | Application pool object to be created.
+	body := *openapiclient.NewApplicationPoolCreateSpecV2("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", "Firefox") // ApplicationPoolCreateSpecV2 | Application pool object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateApplicationPoolV2(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateApplicationPoolV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateApplicationPoolV2(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateApplicationPoolV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1440,6 +1608,70 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CreateApplicationPoolV3
+
+> CreateApplicationPoolV3(ctx).Body(body).Execute()
+
+Creates an application pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := *openapiclient.NewApplicationPoolCreateSpecV3("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", "Firefox") // ApplicationPoolCreateSpecV3 | Application pool object to be created.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateApplicationPoolV3(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateApplicationPoolV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateApplicationPoolV3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ApplicationPoolCreateSpecV3**](ApplicationPoolCreateSpecV3.md) | Application pool object to be created. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateDesktopPool
 
 > CreateDesktopPool(ctx).Body(body).Execute()
@@ -1454,22 +1686,22 @@ Creates a desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewDesktopPoolCreateSpec("ManualPool", "AUTOMATED") // DesktopPoolCreateSpec | Desktop pool object to be created.
+	body := *openapiclient.NewDesktopPoolCreateSpec("ManualPool", "AUTOMATED") // DesktopPoolCreateSpec | Desktop pool object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateDesktopPool(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateDesktopPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateDesktopPool(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateDesktopPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1504,6 +1736,70 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CreateDesktopPoolV2
+
+> CreateDesktopPoolV2(ctx).Body(body).Execute()
+
+Creates a desktop pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := *openapiclient.NewDesktopPoolCreateSpecV2("ManualPool", "AUTOMATED") // DesktopPoolCreateSpecV2 | Desktop pool object to be created.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateDesktopPoolV2(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateDesktopPoolV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDesktopPoolV2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DesktopPoolCreateSpecV2**](DesktopPoolCreateSpecV2.md) | Desktop pool object to be created. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateFarm
 
 > CreateFarm(ctx).Body(body).Execute()
@@ -1518,22 +1814,22 @@ Creates a farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewFarmCreateSpec("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", "MANUAL") // FarmCreateSpec | Farm object to be created.
+	body := *openapiclient.NewFarmCreateSpec("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", "MANUAL") // FarmCreateSpec | Farm object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateFarm(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateFarm``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateFarm(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1582,22 +1878,22 @@ Creates a farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewFarmCreateSpecV2("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", "MANUAL") // FarmCreateSpecV2 | Farm object to be created.
+	body := *openapiclient.NewFarmCreateSpecV2("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", "MANUAL") // FarmCreateSpecV2 | Farm object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateFarmV2(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateFarmV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateFarmV2(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateFarmV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1632,6 +1928,70 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CreateFarmV3
+
+> CreateFarmV3(ctx).Body(body).Execute()
+
+Creates a farm.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := *openapiclient.NewFarmCreateSpecV3("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", "MANUAL") // FarmCreateSpecV3 | Farm object to be created.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateFarmV3(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateFarmV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateFarmV3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**FarmCreateSpecV3**](FarmCreateSpecV3.md) | Farm object to be created. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateGlobalApplicationEntitlement
 
 > CreateGlobalApplicationEntitlement(ctx).Body(body).Execute()
@@ -1646,22 +2006,22 @@ Creates a Global Application Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewGlobalApplicationEntitlementCreateSpec("310927ee-1195-44c3-b877-5b194b4b4ea8", "global-application-entitlement") // GlobalApplicationEntitlementCreateSpec | Global Application Entitlement object to be created.
+	body := *openapiclient.NewGlobalApplicationEntitlementCreateSpec("310927ee-1195-44c3-b877-5b194b4b4ea8", "global-application-entitlement") // GlobalApplicationEntitlementCreateSpec | Global Application Entitlement object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateGlobalApplicationEntitlement(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateGlobalApplicationEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateGlobalApplicationEntitlement(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateGlobalApplicationEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1710,22 +2070,22 @@ Creates a Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewGlobalDesktopEntitlementCreateSpec("global-desktop-entitlement") // GlobalDesktopEntitlementCreateSpec | Global Desktop Entitlement object to be created.
+	body := *openapiclient.NewGlobalDesktopEntitlementCreateSpec("global-desktop-entitlement") // GlobalDesktopEntitlementCreateSpec | Global Desktop Entitlement object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateGlobalDesktopEntitlement(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateGlobalDesktopEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateGlobalDesktopEntitlement(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateGlobalDesktopEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1774,22 +2134,22 @@ Creates a Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewGlobalDesktopEntitlementCreateSpecV2("310927ee-1195-44c3-b877-5b194b4b4ea8", "global-desktop-entitlement") // GlobalDesktopEntitlementCreateSpecV2 | Global Desktop Entitlement object to be created.
+	body := *openapiclient.NewGlobalDesktopEntitlementCreateSpecV2("310927ee-1195-44c3-b877-5b194b4b4ea8", "global-desktop-entitlement") // GlobalDesktopEntitlementCreateSpecV2 | Global Desktop Entitlement object to be created.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.CreateGlobalDesktopEntitlementV2(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.CreateGlobalDesktopEntitlementV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.CreateGlobalDesktopEntitlementV2(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.CreateGlobalDesktopEntitlementV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1838,22 +2198,22 @@ Deletes application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteApplicationPool(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteApplicationPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteApplicationPool(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteApplicationPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1906,23 +2266,23 @@ Deletes a desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "0103796c-102b-4ed3-953f-3dfe3d23e0fe" // string | ID of the desktop pool to be deleted.
-    body := *openapiclient.NewDesktopPoolDeleteSpec() // DesktopPoolDeleteSpec | Desktop pool object to be deleted. (optional)
+	id := "0103796c-102b-4ed3-953f-3dfe3d23e0fe" // string | ID of the desktop pool to be deleted.
+	body := *openapiclient.NewDesktopPoolDeleteSpec() // DesktopPoolDeleteSpec | Desktop pool object to be deleted. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteDesktopPool(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteDesktopPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteDesktopPool(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteDesktopPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -1976,22 +2336,22 @@ Deletes a farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteFarm(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteFarm``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteFarm(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -2044,22 +2404,22 @@ Deletes a Global Application Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Application Entitlement ID
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Application Entitlement ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteGlobalApplicationEntitlement(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteGlobalApplicationEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteGlobalApplicationEntitlement(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteGlobalApplicationEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -2112,22 +2472,22 @@ Deletes a Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Desktop Entitlement ID
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Desktop Entitlement ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteGlobalDesktopEntitlement(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteGlobalDesktopEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteGlobalDesktopEntitlement(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteGlobalDesktopEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -2180,23 +2540,23 @@ Deletes the machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewMachineDeleteData() // MachineDeleteData | The specification applicable to deleting the machine.
+	id := "id_example" // string | id
+	body := *openapiclient.NewMachineDeleteData() // MachineDeleteData | The specification applicable to deleting the machine.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteMachine(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteMachine``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteMachine(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteMachine``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -2250,24 +2610,24 @@ Deletes the specified machines.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewMachineDeleteSpec([]string{"MachineIds_example"}) // MachineDeleteSpec | The machines and specification for deletion.
+	body := *openapiclient.NewMachineDeleteSpec([]string{"MachineIds_example"}) // MachineDeleteSpec | The machines and specification for deletion.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteMachines(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DeleteMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.DeleteMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.DeleteMachines(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DeleteMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.DeleteMachines`: %v\n", resp)
 }
 ```
 
@@ -2316,22 +2676,22 @@ Deletes the Physical Machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Physical machine ID
+	id := "id_example" // string | Physical machine ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeletePhysicalMachine(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeletePhysicalMachine``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeletePhysicalMachine(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeletePhysicalMachine``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -2384,22 +2744,22 @@ Deletes the RDS Server.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | RDS Server ID
+	id := "id_example" // string | RDS Server ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DeleteRDSServer(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DeleteRDSServer``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DeleteRDSServer(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DeleteRDSServer``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -2438,6 +2798,148 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## DesktopPoolApplyImage
+
+> []BulkItemResponseInfo DesktopPoolApplyImage(ctx, id).Body(body).PendingImage(pendingImage).Execute()
+
+Applies the pending image or the current image to selected machines in the desktop pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | Desktop pool ID
+	body := []string{"Property_example"} // []string | Machines on which the image is to be applied.
+	pendingImage := false // bool | Indicates whether the pending image is to be applied. If false, the current image will be applied. (optional) (default to false)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.DesktopPoolApplyImage(context.Background(), id).Body(body).PendingImage(pendingImage).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DesktopPoolApplyImage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DesktopPoolApplyImage`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.DesktopPoolApplyImage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | Desktop pool ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDesktopPoolApplyImageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **body** | **[]string** | Machines on which the image is to be applied. | 
+ **pendingImage** | **bool** | Indicates whether the pending image is to be applied. If false, the current image will be applied. | [default to false]
+
+### Return type
+
+[**[]BulkItemResponseInfo**](BulkItemResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DesktopPoolPromotePendingImage
+
+> DesktopPoolPromotePendingImage(ctx, id).Execute()
+
+Promotes pending image to current image in the desktop pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.DesktopPoolPromotePendingImage(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DesktopPoolPromotePendingImage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDesktopPoolPromotePendingImageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DisconnectGlobalSessions
 
 > []BulkGlobalSessionActionResponseInfo DisconnectGlobalSessions(ctx).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
@@ -2452,24 +2954,24 @@ Disconnects global sessions in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be disconnected.
+	globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be disconnected.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DisconnectGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DisconnectGlobalSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DisconnectGlobalSessions`: []BulkGlobalSessionActionResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.DisconnectGlobalSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.DisconnectGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DisconnectGlobalSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DisconnectGlobalSessions`: []BulkGlobalSessionActionResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.DisconnectGlobalSessions`: %v\n", resp)
 }
 ```
 
@@ -2518,24 +3020,24 @@ Disconnects locally resourced user sessions.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of session ids to be disconnected.
+	body := []string{"Property_example"} // []string | List of session ids to be disconnected.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.DisconnectSessions(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.DisconnectSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DisconnectSessions`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.DisconnectSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.DisconnectSessions(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.DisconnectSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DisconnectSessions`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.DisconnectSessions`: %v\n", resp)
 }
 ```
 
@@ -2572,7 +3074,7 @@ Name | Type | Description  | Notes
 
 ## EnterMaintenance
 
-> []BulkItemResponseInfo EnterMaintenance(ctx).Body(body).Execute()
+> []BulkItemResponseInfo EnterMaintenance(ctx).Body(body).Enforce(enforce).Execute()
 
 Puts the machines into maintenance mode.
 
@@ -2584,24 +3086,25 @@ Puts the machines into maintenance mode.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be put into maintenance mode.
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be put into maintenance mode.
+	enforce := "enforce_example" // string | Only Forensics admin can set this value.  If passed as \"true\", then this action is applicable for both held and non held vms.  If passed as \"false\", then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.EnterMaintenance(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.EnterMaintenance``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `EnterMaintenance`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.EnterMaintenance`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.EnterMaintenance(context.Background()).Body(body).Enforce(enforce).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.EnterMaintenance``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `EnterMaintenance`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.EnterMaintenance`: %v\n", resp)
 }
 ```
 
@@ -2617,6 +3120,7 @@ Other parameters are passed through a pointer to a apiEnterMaintenanceRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | **[]string** | List of Machine Ids representing the machines to be put into maintenance mode. | 
+ **enforce** | **string** | Only Forensics admin can set this value.  If passed as \&quot;true\&quot;, then this action is applicable for both held and non held vms.  If passed as \&quot;false\&quot;, then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. | 
 
 ### Return type
 
@@ -2650,24 +3154,24 @@ Puts the machines out of maintenance mode.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be put out of maintenance mode.
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be put out of maintenance mode.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ExitMaintenance(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ExitMaintenance``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ExitMaintenance`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ExitMaintenance`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ExitMaintenance(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ExitMaintenance``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ExitMaintenance`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ExitMaintenance`: %v\n", resp)
 }
 ```
 
@@ -2702,6 +3206,288 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## FarmApplyImage
+
+> []BulkItemResponseInfo FarmApplyImage(ctx, id).Body(body).PendingImage(pendingImage).Execute()
+
+Applies the pending image or the current image to selected RDS servers in the farm.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | Farm ID
+	body := []string{"Property_example"} // []string | RDS servers on which the image is to be applied.
+	pendingImage := false // bool | Indicates whether the pending image is to be applied. If false, the current image will be applied. (optional) (default to false)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.FarmApplyImage(context.Background(), id).Body(body).PendingImage(pendingImage).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.FarmApplyImage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `FarmApplyImage`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.FarmApplyImage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | Farm ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiFarmApplyImageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **body** | **[]string** | RDS servers on which the image is to be applied. | 
+ **pendingImage** | **bool** | Indicates whether the pending image is to be applied. If false, the current image will be applied. | [default to false]
+
+### Return type
+
+[**[]BulkItemResponseInfo**](BulkItemResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FarmPromotePendingImage
+
+> FarmPromotePendingImage(ctx, id).Execute()
+
+Promotes pending image to current image in the farm.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.FarmPromotePendingImage(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.FarmPromotePendingImage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiFarmPromotePendingImageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetAgentInstallerPackage
+
+> AgentInstallerPackageInfo GetAgentInstallerPackage(ctx, id).Execute()
+
+Retrieves an agent installer package.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "8fdefa82-17e4-4367-b5b1-8d97e4fd5e56" // string | Id of agent installer package
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetAgentInstallerPackage(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetAgentInstallerPackage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetAgentInstallerPackage`: AgentInstallerPackageInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetAgentInstallerPackage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | Id of agent installer package | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetAgentInstallerPackageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**AgentInstallerPackageInfo**](AgentInstallerPackageInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetAgentUpgradeTask
+
+> AgentUpgradeTaskInfo GetAgentUpgradeTask(ctx, id).Execute()
+
+Get agent upgrade task information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetAgentUpgradeTask(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetAgentUpgradeTask``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetAgentUpgradeTask`: AgentUpgradeTaskInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetAgentUpgradeTask`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetAgentUpgradeTaskRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**AgentUpgradeTaskInfo**](AgentUpgradeTaskInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetApplicationIcon
 
 > ApplicationIconInfo GetApplicationIcon(ctx, id).Execute()
@@ -2716,24 +3502,24 @@ Gets application icon.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetApplicationIcon(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetApplicationIcon``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetApplicationIcon`: ApplicationIconInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetApplicationIcon`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetApplicationIcon(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetApplicationIcon``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetApplicationIcon`: ApplicationIconInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetApplicationIcon`: %v\n", resp)
 }
 ```
 
@@ -2786,24 +3572,24 @@ Gets application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetApplicationPool(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetApplicationPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetApplicationPool`: ApplicationPoolInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetApplicationPool`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetApplicationPool(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetApplicationPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetApplicationPool`: ApplicationPoolInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetApplicationPool`: %v\n", resp)
 }
 ```
 
@@ -2856,24 +3642,24 @@ Gets application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetApplicationPoolV2(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetApplicationPoolV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetApplicationPoolV2`: ApplicationPoolInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetApplicationPoolV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetApplicationPoolV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetApplicationPoolV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetApplicationPoolV2`: ApplicationPoolInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetApplicationPoolV2`: %v\n", resp)
 }
 ```
 
@@ -2926,24 +3712,24 @@ Gets application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetApplicationPoolV3(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetApplicationPoolV3``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetApplicationPoolV3`: ApplicationPoolInfoV3
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetApplicationPoolV3`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetApplicationPoolV3(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetApplicationPoolV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetApplicationPoolV3`: ApplicationPoolInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetApplicationPoolV3`: %v\n", resp)
 }
 ```
 
@@ -2982,6 +3768,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetApplicationPoolV4
+
+> ApplicationPoolInfoV4 GetApplicationPoolV4(ctx, id).Execute()
+
+Gets application pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetApplicationPoolV4(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetApplicationPoolV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetApplicationPoolV4`: ApplicationPoolInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetApplicationPoolV4`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetApplicationPoolV4Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**ApplicationPoolInfoV4**](ApplicationPoolInfoV4.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetDesktopPool
 
 > DesktopPoolInfo GetDesktopPool(ctx, id).Execute()
@@ -2996,24 +3852,24 @@ Gets the Desktop Pool information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetDesktopPool(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetDesktopPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPool`: DesktopPoolInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetDesktopPool`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPool(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPool`: DesktopPoolInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPool`: %v\n", resp)
 }
 ```
 
@@ -3066,25 +3922,25 @@ Gets the task information on the desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Desktop pool ID
-    taskId := "taskId_example" // string | Desktop pool task ID
+	id := "id_example" // string | Desktop pool ID
+	taskId := "taskId_example" // string | Desktop pool task ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetDesktopPoolTask(context.Background(), id, taskId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetDesktopPoolTask``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPoolTask`: DesktopPoolTaskInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetDesktopPoolTask`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPoolTask(context.Background(), id, taskId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPoolTask``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolTask`: DesktopPoolTaskInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPoolTask`: %v\n", resp)
 }
 ```
 
@@ -3139,24 +3995,24 @@ Gets the desktop pool information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetDesktopPoolV2(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetDesktopPoolV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPoolV2`: DesktopPoolInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetDesktopPoolV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPoolV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPoolV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolV2`: DesktopPoolInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPoolV2`: %v\n", resp)
 }
 ```
 
@@ -3209,24 +4065,24 @@ Gets the desktop pool information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetDesktopPoolV3(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetDesktopPoolV3``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPoolV3`: DesktopPoolInfoV3
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetDesktopPoolV3`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPoolV3(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPoolV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolV3`: DesktopPoolInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPoolV3`: %v\n", resp)
 }
 ```
 
@@ -3279,24 +4135,24 @@ Gets the desktop pool information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetDesktopPoolV4(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetDesktopPoolV4``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPoolV4`: DesktopPoolInfoV4
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetDesktopPoolV4`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPoolV4(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPoolV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolV4`: DesktopPoolInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPoolV4`: %v\n", resp)
 }
 ```
 
@@ -3349,24 +4205,24 @@ Gets the desktop pool information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetDesktopPoolV5(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetDesktopPoolV5``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetDesktopPoolV5`: DesktopPoolInfoV5
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetDesktopPoolV5`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPoolV5(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPoolV5``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolV5`: DesktopPoolInfoV5
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPoolV5`: %v\n", resp)
 }
 ```
 
@@ -3405,6 +4261,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetDesktopPoolV6
+
+> DesktopPoolInfoV6 GetDesktopPoolV6(ctx, id).Execute()
+
+Gets the desktop pool information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetDesktopPoolV6(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetDesktopPoolV6``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetDesktopPoolV6`: DesktopPoolInfoV6
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetDesktopPoolV6`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDesktopPoolV6Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**DesktopPoolInfoV6**](DesktopPoolInfoV6.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetFarm
 
 > FarmInfo GetFarm(ctx, id).Execute()
@@ -3419,24 +4345,24 @@ Gets the Farm information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetFarm(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetFarm``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetFarm`: FarmInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetFarm`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetFarm(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFarm`: FarmInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetFarm`: %v\n", resp)
 }
 ```
 
@@ -3489,24 +4415,24 @@ Gets the Farm information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetFarmV2(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetFarmV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetFarmV2`: FarmInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetFarmV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetFarmV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetFarmV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFarmV2`: FarmInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetFarmV2`: %v\n", resp)
 }
 ```
 
@@ -3559,24 +4485,24 @@ Gets the Farm information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetFarmV3(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetFarmV3``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetFarmV3`: FarmInfoV3
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetFarmV3`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetFarmV3(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetFarmV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFarmV3`: FarmInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetFarmV3`: %v\n", resp)
 }
 ```
 
@@ -3615,6 +4541,146 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetFarmV4
+
+> FarmInfoV4 GetFarmV4(ctx, id).Execute()
+
+Gets the Farm information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetFarmV4(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetFarmV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFarmV4`: FarmInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetFarmV4`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetFarmV4Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**FarmInfoV4**](FarmInfoV4.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetFarmV5
+
+> FarmInfoV5 GetFarmV5(ctx, id).Execute()
+
+Gets the Farm information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetFarmV5(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetFarmV5``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFarmV5`: FarmInfoV5
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetFarmV5`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetFarmV5Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**FarmInfoV5**](FarmInfoV5.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetGlobalApplicationEntitlement
 
 > GlobalApplicationEntitlementInfo GetGlobalApplicationEntitlement(ctx, id).Execute()
@@ -3629,24 +4695,24 @@ Gets the Global Application Entitlement in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetGlobalApplicationEntitlement(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetGlobalApplicationEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetGlobalApplicationEntitlement`: GlobalApplicationEntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetGlobalApplicationEntitlement`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetGlobalApplicationEntitlement(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetGlobalApplicationEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGlobalApplicationEntitlement`: GlobalApplicationEntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetGlobalApplicationEntitlement`: %v\n", resp)
 }
 ```
 
@@ -3699,24 +4765,24 @@ Gets the Global Application Entitlement in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetGlobalApplicationEntitlementV2(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetGlobalApplicationEntitlementV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetGlobalApplicationEntitlementV2`: GlobalApplicationEntitlementInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetGlobalApplicationEntitlementV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetGlobalApplicationEntitlementV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetGlobalApplicationEntitlementV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGlobalApplicationEntitlementV2`: GlobalApplicationEntitlementInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetGlobalApplicationEntitlementV2`: %v\n", resp)
 }
 ```
 
@@ -3769,24 +4835,24 @@ Gets the Global Desktop Entitlement in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetGlobalDesktopEntitlement(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetGlobalDesktopEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetGlobalDesktopEntitlement`: GlobalDesktopEntitlementInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetGlobalDesktopEntitlement`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetGlobalDesktopEntitlement(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetGlobalDesktopEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGlobalDesktopEntitlement`: GlobalDesktopEntitlementInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetGlobalDesktopEntitlement`: %v\n", resp)
 }
 ```
 
@@ -3839,24 +4905,24 @@ Gets the Global Desktop Entitlement in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetGlobalDesktopEntitlementV2(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetGlobalDesktopEntitlementV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetGlobalDesktopEntitlementV2`: GlobalDesktopEntitlementInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetGlobalDesktopEntitlementV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetGlobalDesktopEntitlementV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetGlobalDesktopEntitlementV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetGlobalDesktopEntitlementV2`: GlobalDesktopEntitlementInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetGlobalDesktopEntitlementV2`: %v\n", resp)
 }
 ```
 
@@ -3909,24 +4975,24 @@ Gets the Machine information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetMachine(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetMachine``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMachine`: MachineInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetMachine`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetMachine(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetMachine``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMachine`: MachineInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetMachine`: %v\n", resp)
 }
 ```
 
@@ -3979,24 +5045,24 @@ Gets the Machine information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetMachineV2(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetMachineV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMachineV2`: MachineInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetMachineV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetMachineV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetMachineV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMachineV2`: MachineInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetMachineV2`: %v\n", resp)
 }
 ```
 
@@ -4035,6 +5101,146 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetMachineV3
+
+> MachineInfoV3 GetMachineV3(ctx, id).Execute()
+
+Gets the Machine information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetMachineV3(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetMachineV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMachineV3`: MachineInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetMachineV3`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetMachineV3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**MachineInfoV3**](MachineInfoV3.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetMachineV4
+
+> MachineInfoV4 GetMachineV4(ctx, id).Execute()
+
+Gets the Machine information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetMachineV4(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetMachineV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMachineV4`: MachineInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetMachineV4`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetMachineV4Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**MachineInfoV4**](MachineInfoV4.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetPhysicalMachine
 
 > PhysicalMachineInfo GetPhysicalMachine(ctx, id).Execute()
@@ -4049,24 +5255,24 @@ Gets the Physical Machine information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Physical machine ID
+	id := "id_example" // string | Physical machine ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetPhysicalMachine(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetPhysicalMachine``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetPhysicalMachine`: PhysicalMachineInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetPhysicalMachine`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetPhysicalMachine(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetPhysicalMachine``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPhysicalMachine`: PhysicalMachineInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetPhysicalMachine`: %v\n", resp)
 }
 ```
 
@@ -4105,6 +5311,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetPhysicalMachineV2
+
+> PhysicalMachineInfoV2 GetPhysicalMachineV2(ctx, id).Execute()
+
+Gets the Physical Machine information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | Physical machine ID
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetPhysicalMachineV2(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetPhysicalMachineV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPhysicalMachineV2`: PhysicalMachineInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetPhysicalMachineV2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | Physical machine ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetPhysicalMachineV2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**PhysicalMachineInfoV2**](PhysicalMachineInfoV2.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetRDSServer
 
 > RDSServerInfo GetRDSServer(ctx, id).Execute()
@@ -4119,24 +5395,24 @@ Gets the RDS Server information.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | RDS Server ID
+	id := "id_example" // string | RDS Server ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetRDSServer(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetRDSServer``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetRDSServer`: RDSServerInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetRDSServer`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetRDSServer(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetRDSServer``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetRDSServer`: RDSServerInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetRDSServer`: %v\n", resp)
 }
 ```
 
@@ -4189,24 +5465,24 @@ Gets the Session information for locally resourced session.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.GetSessionInfo(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetSessionInfo``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetSessionInfo`: SessionInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetSessionInfo`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.GetSessionInfo(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.GetSessionInfo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetSessionInfo`: SessionInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.GetSessionInfo`: %v\n", resp)
 }
 ```
 
@@ -4245,6 +5521,198 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ListAgentInstallerPackages
+
+> []AgentInstallerPackageInfo ListAgentInstallerPackages(ctx).Execute()
+
+Lists agent installer packages.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListAgentInstallerPackages(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListAgentInstallerPackages``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListAgentInstallerPackages`: []AgentInstallerPackageInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListAgentInstallerPackages`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListAgentInstallerPackagesRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]AgentInstallerPackageInfo**](AgentInstallerPackageInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ListAgentUpgradeTasks
+
+> []AgentUpgradeTaskInfo ListAgentUpgradeTasks(ctx).Execute()
+
+List agent upgrade tasks information.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListAgentUpgradeTasks(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListAgentUpgradeTasks``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListAgentUpgradeTasks`: []AgentUpgradeTaskInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListAgentUpgradeTasks`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListAgentUpgradeTasksRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]AgentUpgradeTaskInfo**](AgentUpgradeTaskInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ListAppVolumesApplicationsOnFarm
+
+> []AppVolumesApplicationInfo ListAppVolumesApplicationsOnFarm(ctx, id).Execute()
+
+Lists the App Volumes applications on the given farm.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListAppVolumesApplicationsOnFarm(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListAppVolumesApplicationsOnFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListAppVolumesApplicationsOnFarm`: []AppVolumesApplicationInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListAppVolumesApplicationsOnFarm`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListAppVolumesApplicationsOnFarmRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**[]AppVolumesApplicationInfo**](AppVolumesApplicationInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ListApplicationIcons
 
 > []ApplicationIconInfo ListApplicationIcons(ctx).ApplicationPoolId(applicationPoolId).Execute()
@@ -4259,24 +5727,24 @@ Lists the application icons for the given application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    applicationPoolId := "applicationPoolId_example" // string | Application Pool ID
+	applicationPoolId := "applicationPoolId_example" // string | Application Pool ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListApplicationIcons(context.Background()).ApplicationPoolId(applicationPoolId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListApplicationIcons``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListApplicationIcons`: []ApplicationIconInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListApplicationIcons`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListApplicationIcons(context.Background()).ApplicationPoolId(applicationPoolId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListApplicationIcons``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListApplicationIcons`: []ApplicationIconInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListApplicationIcons`: %v\n", resp)
 }
 ```
 
@@ -4325,26 +5793,26 @@ Lists the application pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListApplicationPools(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListApplicationPools``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListApplicationPools`: []ApplicationPoolInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListApplicationPools`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListApplicationPools(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListApplicationPools``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListApplicationPools`: []ApplicationPoolInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListApplicationPools`: %v\n", resp)
 }
 ```
 
@@ -4395,26 +5863,26 @@ Lists the application pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListApplicationPoolsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListApplicationPoolsV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListApplicationPoolsV2`: []ApplicationPoolInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListApplicationPoolsV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListApplicationPoolsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListApplicationPoolsV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListApplicationPoolsV2`: []ApplicationPoolInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListApplicationPoolsV2`: %v\n", resp)
 }
 ```
 
@@ -4465,26 +5933,26 @@ Lists the application pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListApplicationPoolsV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListApplicationPoolsV3``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListApplicationPoolsV3`: []ApplicationPoolInfoV3
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListApplicationPoolsV3`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListApplicationPoolsV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListApplicationPoolsV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListApplicationPoolsV3`: []ApplicationPoolInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListApplicationPoolsV3`: %v\n", resp)
 }
 ```
 
@@ -4521,6 +5989,137 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ListApplicationPoolsV4
+
+> []ApplicationPoolInfoV4 ListApplicationPoolsV4(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the application pools in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListApplicationPoolsV4(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListApplicationPoolsV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListApplicationPoolsV4`: []ApplicationPoolInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListApplicationPoolsV4`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListApplicationPoolsV4Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]ApplicationPoolInfoV4**](ApplicationPoolInfoV4.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ListCategoryFolders
+
+> []string ListCategoryFolders(ctx).Execute()
+
+Lists the category folders.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListCategoryFolders(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListCategoryFolders``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListCategoryFolders`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListCategoryFolders`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListCategoryFoldersRequest struct via the builder pattern
+
+
+### Return type
+
+**[]string**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ListCompatibleBackupGAEs
 
 > []string ListCompatibleBackupGAEs(ctx, id).Execute()
@@ -4535,24 +6134,24 @@ Lists the Global Application Entitlements that can be associated as backup Globa
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Application Entitlement ID
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Application Entitlement ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListCompatibleBackupGAEs(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListCompatibleBackupGAEs``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListCompatibleBackupGAEs`: []string
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListCompatibleBackupGAEs`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListCompatibleBackupGAEs(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListCompatibleBackupGAEs``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListCompatibleBackupGAEs`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListCompatibleBackupGAEs`: %v\n", resp)
 }
 ```
 
@@ -4605,24 +6204,24 @@ Lists the Global Desktop Entitlements that can be associated as backup Global De
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Desktop Entitlement ID
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Desktop Entitlement ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListCompatibleBackupGDEs(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListCompatibleBackupGDEs``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListCompatibleBackupGDEs`: []string
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListCompatibleBackupGDEs`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListCompatibleBackupGDEs(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListCompatibleBackupGDEs``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListCompatibleBackupGDEs`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListCompatibleBackupGDEs`: %v\n", resp)
 }
 ```
 
@@ -4675,24 +6274,24 @@ Lists Local Application Pools which are compatible with Global Application Entit
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListCompatibleLocalApplicationPools(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListCompatibleLocalApplicationPools``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListCompatibleLocalApplicationPools`: []string
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListCompatibleLocalApplicationPools`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListCompatibleLocalApplicationPools(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListCompatibleLocalApplicationPools``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListCompatibleLocalApplicationPools`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListCompatibleLocalApplicationPools`: %v\n", resp)
 }
 ```
 
@@ -4745,24 +6344,24 @@ Lists Local Desktop Pools which are compatible with Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListCompatibleLocalDesktopPools(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListCompatibleLocalDesktopPools``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListCompatibleLocalDesktopPools`: []string
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListCompatibleLocalDesktopPools`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListCompatibleLocalDesktopPools(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListCompatibleLocalDesktopPools``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListCompatibleLocalDesktopPools`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListCompatibleLocalDesktopPools`: %v\n", resp)
 }
 ```
 
@@ -4815,24 +6414,24 @@ Lists the tasks on the desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListDesktopPoolTasks(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListDesktopPoolTasks``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPoolTasks`: []DesktopPoolTaskInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListDesktopPoolTasks`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPoolTasks(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPoolTasks``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolTasks`: []DesktopPoolTaskInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPoolTasks`: %v\n", resp)
 }
 ```
 
@@ -4885,23 +6484,23 @@ Lists the Desktop Pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListDesktopPools(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListDesktopPools``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPools`: []DesktopPoolInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListDesktopPools`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPools(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPools``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPools`: []DesktopPoolInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPools`: %v\n", resp)
 }
 ```
 
@@ -4946,26 +6545,26 @@ Lists the desktop pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListDesktopPoolsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListDesktopPoolsV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPoolsV2`: []DesktopPoolInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListDesktopPoolsV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPoolsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPoolsV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolsV2`: []DesktopPoolInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPoolsV2`: %v\n", resp)
 }
 ```
 
@@ -5016,26 +6615,26 @@ Lists the desktop pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListDesktopPoolsV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListDesktopPoolsV3``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPoolsV3`: []DesktopPoolInfoV3
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListDesktopPoolsV3`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPoolsV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPoolsV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolsV3`: []DesktopPoolInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPoolsV3`: %v\n", resp)
 }
 ```
 
@@ -5086,26 +6685,26 @@ Lists the desktop pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListDesktopPoolsV4(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListDesktopPoolsV4``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPoolsV4`: []DesktopPoolInfoV4
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListDesktopPoolsV4`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPoolsV4(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPoolsV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolsV4`: []DesktopPoolInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPoolsV4`: %v\n", resp)
 }
 ```
 
@@ -5156,26 +6755,26 @@ Lists the desktop pools in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListDesktopPoolsV5(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListDesktopPoolsV5``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListDesktopPoolsV5`: []DesktopPoolInfoV5
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListDesktopPoolsV5`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPoolsV5(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPoolsV5``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolsV5`: []DesktopPoolInfoV5
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPoolsV5`: %v\n", resp)
 }
 ```
 
@@ -5212,6 +6811,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ListDesktopPoolsV6
+
+> []DesktopPoolInfoV6 ListDesktopPoolsV6(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the desktop pools in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListDesktopPoolsV6(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListDesktopPoolsV6``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListDesktopPoolsV6`: []DesktopPoolInfoV6
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListDesktopPoolsV6`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListDesktopPoolsV6Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]DesktopPoolInfoV6**](DesktopPoolInfoV6.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ListFarms
 
 > []FarmInfo ListFarms(ctx).Execute()
@@ -5226,23 +6895,23 @@ Lists the Farms in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListFarms(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListFarms``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListFarms`: []FarmInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListFarms`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListFarms(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListFarms``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListFarms`: []FarmInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListFarms`: %v\n", resp)
 }
 ```
 
@@ -5287,26 +6956,26 @@ Lists the Farms in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListFarmsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListFarmsV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListFarmsV2`: []FarmInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListFarmsV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListFarmsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListFarmsV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListFarmsV2`: []FarmInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListFarmsV2`: %v\n", resp)
 }
 ```
 
@@ -5357,26 +7026,26 @@ Lists the Farms in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListFarmsV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListFarmsV3``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListFarmsV3`: []FarmInfoV3
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListFarmsV3`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListFarmsV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListFarmsV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListFarmsV3`: []FarmInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListFarmsV3`: %v\n", resp)
 }
 ```
 
@@ -5413,6 +7082,146 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ListFarmsV4
+
+> []FarmInfoV4 ListFarmsV4(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the Farms in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListFarmsV4(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListFarmsV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListFarmsV4`: []FarmInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListFarmsV4`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListFarmsV4Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]FarmInfoV4**](FarmInfoV4.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ListFarmsV5
+
+> []FarmInfoV5 ListFarmsV5(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the Farms in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListFarmsV5(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListFarmsV5``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListFarmsV5`: []FarmInfoV5
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListFarmsV5`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListFarmsV5Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]FarmInfoV5**](FarmInfoV5.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ListGlobalApplicationEntitlements
 
 > []GlobalApplicationEntitlementSummary ListGlobalApplicationEntitlements(ctx).Filter(filter).Page(page).Size(size).Execute()
@@ -5427,26 +7236,26 @@ Lists the Global Application Entitlements in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListGlobalApplicationEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListGlobalApplicationEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListGlobalApplicationEntitlements`: []GlobalApplicationEntitlementSummary
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListGlobalApplicationEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListGlobalApplicationEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListGlobalApplicationEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListGlobalApplicationEntitlements`: []GlobalApplicationEntitlementSummary
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListGlobalApplicationEntitlements`: %v\n", resp)
 }
 ```
 
@@ -5497,26 +7306,26 @@ Lists the Global Application Entitlements in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListGlobalApplicationEntitlementsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListGlobalApplicationEntitlementsV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListGlobalApplicationEntitlementsV2`: []GlobalApplicationEntitlementSummaryV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListGlobalApplicationEntitlementsV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListGlobalApplicationEntitlementsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListGlobalApplicationEntitlementsV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListGlobalApplicationEntitlementsV2`: []GlobalApplicationEntitlementSummaryV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListGlobalApplicationEntitlementsV2`: %v\n", resp)
 }
 ```
 
@@ -5567,26 +7376,26 @@ Lists the Global Desktop Entitlements in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListGlobalDesktopEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListGlobalDesktopEntitlements``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListGlobalDesktopEntitlements`: []GlobalDesktopEntitlementSummary
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListGlobalDesktopEntitlements`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListGlobalDesktopEntitlements(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListGlobalDesktopEntitlements``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListGlobalDesktopEntitlements`: []GlobalDesktopEntitlementSummary
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListGlobalDesktopEntitlements`: %v\n", resp)
 }
 ```
 
@@ -5637,26 +7446,26 @@ Lists the Global Desktop Entitlements in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListGlobalDesktopEntitlementsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListGlobalDesktopEntitlementsV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListGlobalDesktopEntitlementsV2`: []GlobalDesktopEntitlementSummaryV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListGlobalDesktopEntitlementsV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListGlobalDesktopEntitlementsV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListGlobalDesktopEntitlementsV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListGlobalDesktopEntitlementsV2`: []GlobalDesktopEntitlementSummaryV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListGlobalDesktopEntitlementsV2`: %v\n", resp)
 }
 ```
 
@@ -5707,24 +7516,24 @@ Lists the installed applications on the given desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListInstalledApplicationsOnDesktopPool(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListInstalledApplicationsOnDesktopPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListInstalledApplicationsOnDesktopPool`: []InstalledApplicationInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListInstalledApplicationsOnDesktopPool`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListInstalledApplicationsOnDesktopPool(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListInstalledApplicationsOnDesktopPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListInstalledApplicationsOnDesktopPool`: []InstalledApplicationInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListInstalledApplicationsOnDesktopPool`: %v\n", resp)
 }
 ```
 
@@ -5777,24 +7586,24 @@ Lists the installed applications on the given farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListInstalledApplicationsOnFarm(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListInstalledApplicationsOnFarm``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListInstalledApplicationsOnFarm`: []InstalledApplicationInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListInstalledApplicationsOnFarm`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListInstalledApplicationsOnFarm(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListInstalledApplicationsOnFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListInstalledApplicationsOnFarm`: []InstalledApplicationInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListInstalledApplicationsOnFarm`: %v\n", resp)
 }
 ```
 
@@ -5847,24 +7656,24 @@ Lists Local Application Pools which are assigned to Global Application Entitleme
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListLocalApplicationPools(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListLocalApplicationPools``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListLocalApplicationPools`: []string
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListLocalApplicationPools`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListLocalApplicationPools(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListLocalApplicationPools``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListLocalApplicationPools`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListLocalApplicationPools`: %v\n", resp)
 }
 ```
 
@@ -5917,24 +7726,24 @@ Lists Local Desktop Pools which are assigned to Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
+	id := "id_example" // string | id
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListLocalDesktopPools(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListLocalDesktopPools``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListLocalDesktopPools`: []string
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListLocalDesktopPools`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListLocalDesktopPools(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListLocalDesktopPools``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListLocalDesktopPools`: []string
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListLocalDesktopPools`: %v\n", resp)
 }
 ```
 
@@ -5987,26 +7796,26 @@ Lists the Machines in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListMachines(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListMachines`: []MachineInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListMachines(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListMachines`: []MachineInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListMachines`: %v\n", resp)
 }
 ```
 
@@ -6057,26 +7866,26 @@ Lists the Machines in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListMachinesV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListMachinesV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListMachinesV2`: []MachineInfoV2
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListMachinesV2`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListMachinesV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListMachinesV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListMachinesV2`: []MachineInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListMachinesV2`: %v\n", resp)
 }
 ```
 
@@ -6113,6 +7922,146 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ListMachinesV3
+
+> []MachineInfoV3 ListMachinesV3(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the Machines in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListMachinesV3(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListMachinesV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListMachinesV3`: []MachineInfoV3
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListMachinesV3`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListMachinesV3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]MachineInfoV3**](MachineInfoV3.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ListMachinesV4
+
+> []MachineInfoV4 ListMachinesV4(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the Machines in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListMachinesV4(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListMachinesV4``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListMachinesV4`: []MachineInfoV4
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListMachinesV4`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListMachinesV4Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]MachineInfoV4**](MachineInfoV4.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ListPhysicalMachines
 
 > []PhysicalMachineInfo ListPhysicalMachines(ctx).Filter(filter).Page(page).Size(size).Execute()
@@ -6127,26 +8076,26 @@ Lists the Physical Machines in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListPhysicalMachines(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListPhysicalMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListPhysicalMachines`: []PhysicalMachineInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListPhysicalMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListPhysicalMachines(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListPhysicalMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListPhysicalMachines`: []PhysicalMachineInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListPhysicalMachines`: %v\n", resp)
 }
 ```
 
@@ -6183,6 +8132,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ListPhysicalMachinesV2
+
+> []PhysicalMachineInfoV2 ListPhysicalMachinesV2(ctx).Filter(filter).Page(page).Size(size).Execute()
+
+Lists the Physical Machines in the environment.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListPhysicalMachinesV2(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListPhysicalMachinesV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListPhysicalMachinesV2`: []PhysicalMachineInfoV2
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListPhysicalMachinesV2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiListPhysicalMachinesV2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **string** | filter expression built using fields with &lt;b&gt;&#39;supported filters&#39;&lt;/b&gt; as described in output &lt;b&gt;model&lt;/b&gt; schema of this API. | 
+ **page** | **int32** | page, if passed should be &gt; 0. | 
+ **size** | **int32** | size, if passed should be &gt; 0. | 
+
+### Return type
+
+[**[]PhysicalMachineInfoV2**](PhysicalMachineInfoV2.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ListRDSServers
 
 > []RDSServerInfo ListRDSServers(ctx).Filter(filter).Page(page).Size(size).Execute()
@@ -6197,26 +8216,26 @@ Lists the RDS Servers in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListRDSServers(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListRDSServers``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListRDSServers`: []RDSServerInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListRDSServers`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListRDSServers(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListRDSServers``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListRDSServers`: []RDSServerInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListRDSServers`: %v\n", resp)
 }
 ```
 
@@ -6267,26 +8286,26 @@ Lists the locally resourced Sessions in the environment
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	filter := "{"type":"And", "filters":[{"type":"Equals", "name":"<>", "value":"<>"}] }" // string | filter expression built using fields with <b>'supported filters'</b> as described in output <b>model</b> schema of this API. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ListSessionInfo(context.Background()).Filter(filter).Page(page).Size(size).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ListSessionInfo``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ListSessionInfo`: []SessionInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ListSessionInfo`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ListSessionInfo(context.Background()).Filter(filter).Page(page).Size(size).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ListSessionInfo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ListSessionInfo`: []SessionInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ListSessionInfo`: %v\n", resp)
 }
 ```
 
@@ -6337,25 +8356,25 @@ Logs off global sessions in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be logged off.
-    forced := true // bool | Indicates whether sessions should be logged off forcibly.  If set to true, sessions would be logged off forcibly even if they are locked.  If set to false, sessions would be logged off if they are not locked.   (optional) (default to false)
+	globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be logged off.
+	forced := true // bool | Indicates whether sessions should be logged off forcibly.  If set to true, sessions would be logged off forcibly even if they are locked.  If set to false, sessions would be logged off if they are not locked.   (optional) (default to false)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.LogOffGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Forced(forced).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.LogOffGlobalSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `LogOffGlobalSessions`: []BulkGlobalSessionActionResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.LogOffGlobalSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.LogOffGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Forced(forced).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.LogOffGlobalSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `LogOffGlobalSessions`: []BulkGlobalSessionActionResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.LogOffGlobalSessions`: %v\n", resp)
 }
 ```
 
@@ -6405,25 +8424,25 @@ Logs off locally resourced user sessions, if they are not locked.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of session ids to be logged off.
-    forced := false // bool | Indicates to Log off session forcibly.  If passed as \"true\", then sessions are logoff forcibly, even if they are locked.  If passed as \"false\" or not passed at all, then sessions will be normally logged off, if they are not locked. (optional) (default to false)
+	body := []string{"Property_example"} // []string | List of session ids to be logged off.
+	forced := false // bool | Indicates to Log off session forcibly.  If passed as \"true\", then sessions are logoff forcibly, even if they are locked.  If passed as \"false\" or not passed at all, then sessions will be normally logged off, if they are not locked. (optional) (default to false)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.LogOffSessions(context.Background()).Body(body).Forced(forced).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.LogOffSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `LogOffSessions`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.LogOffSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.LogOffSessions(context.Background()).Body(body).Forced(forced).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.LogOffSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `LogOffSessions`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.LogOffSessions`: %v\n", resp)
 }
 ```
 
@@ -6473,23 +8492,23 @@ Pause the instant clone desktop pool push image task.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Desktop pool ID
-    taskId := "taskId_example" // string | Desktop pool task ID
+	id := "id_example" // string | Desktop pool ID
+	taskId := "taskId_example" // string | Desktop pool task ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.PauseDesktopPoolTask(context.Background(), id, taskId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.PauseDesktopPoolTask``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.PauseDesktopPoolTask(context.Background(), id, taskId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.PauseDesktopPoolTask``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -6544,28 +8563,28 @@ Lists global sessions in the environment for the given user, pod or brokering po
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    brokeringPodId := "806ca35f-bcab-4a42-9006-04ba27cad900" // string | ID of the pod that brokered the session. (optional)
-    page := int32(1) // int32 | page, if passed should be > 0. (optional)
-    podId := "96d708fe-badb-40f8-9b80-9029b0ab2ef2" // string | ID of the pod that hosted the session. (optional)
-    size := int32(10) // int32 | size, if passed should be > 0. (optional)
-    userId := "S-1-5-21-1111111111-2222222222-3333333333-500" // string | SID of the user. (optional)
+	brokeringPodId := "806ca35f-bcab-4a42-9006-04ba27cad900" // string | ID of the pod that brokered the session. (optional)
+	page := int32(1) // int32 | page, if passed should be > 0. (optional)
+	podId := "96d708fe-badb-40f8-9b80-9029b0ab2ef2" // string | ID of the pod that hosted the session. (optional)
+	size := int32(10) // int32 | size, if passed should be > 0. (optional)
+	userId := "S-1-5-21-1111111111-2222222222-3333333333-500" // string | SID of the user. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.QueryGlobalSessions(context.Background()).BrokeringPodId(brokeringPodId).Page(page).PodId(podId).Size(size).UserId(userId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.QueryGlobalSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `QueryGlobalSessions`: []GlobalSessionInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.QueryGlobalSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.QueryGlobalSessions(context.Background()).BrokeringPodId(brokeringPodId).Page(page).PodId(podId).Size(size).UserId(userId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.QueryGlobalSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `QueryGlobalSessions`: []GlobalSessionInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.QueryGlobalSessions`: %v\n", resp)
 }
 ```
 
@@ -6618,24 +8637,24 @@ Rebuilds the specified machines.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be rebuilt.
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be rebuilt.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RebuildMachines(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RebuildMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RebuildMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RebuildMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RebuildMachines(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RebuildMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RebuildMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RebuildMachines`: %v\n", resp)
 }
 ```
 
@@ -6672,7 +8691,7 @@ Name | Type | Description  | Notes
 
 ## RecoverMachines
 
-> []BulkItemResponseInfo RecoverMachines(ctx).Body(body).Execute()
+> []BulkItemResponseInfo RecoverMachines(ctx).Body(body).Enforce(enforce).Execute()
 
 Recovers the specified machines.
 
@@ -6684,24 +8703,25 @@ Recovers the specified machines.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be recovered.
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be recovered.
+	enforce := "enforce_example" // string | Only Forensics admin can set this value.  If passed as \"true\", then this action is applicable for both held and non held vms.  If passed as \"false\", then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RecoverMachines(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RecoverMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RecoverMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RecoverMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RecoverMachines(context.Background()).Body(body).Enforce(enforce).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RecoverMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RecoverMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RecoverMachines`: %v\n", resp)
 }
 ```
 
@@ -6717,6 +8737,7 @@ Other parameters are passed through a pointer to a apiRecoverMachinesRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | **[]string** | List of Machine Ids representing the machines to be recovered. | 
+ **enforce** | **string** | Only Forensics admin can set this value.  If passed as \&quot;true\&quot;, then this action is applicable for both held and non held vms.  If passed as \&quot;false\&quot;, then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. | 
 
 ### Return type
 
@@ -6750,24 +8771,24 @@ Recovers the specified RDS Servers.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of RDS Server Ids representing the RDS Servers to be recovered.
+	body := []string{"Property_example"} // []string | List of RDS Server Ids representing the RDS Servers to be recovered.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RecoverRDSServers(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RecoverRDSServers``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RecoverRDSServers`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RecoverRDSServers`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RecoverRDSServers(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RecoverRDSServers``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RecoverRDSServers`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RecoverRDSServers`: %v\n", resp)
 }
 ```
 
@@ -6802,6 +8823,72 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## RegisterAgentInstallerPackage
+
+> AgentInstallerPackageRegisterResponseInfo RegisterAgentInstallerPackage(ctx).Body(body).Execute()
+
+Registers an agent installer package.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := *openapiclient.NewAgentInstallerPackageRegisterSpec("https://example.com/metadata.json") // AgentInstallerPackageRegisterSpec | Agent installer package to be registered
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RegisterAgentInstallerPackage(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RegisterAgentInstallerPackage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RegisterAgentInstallerPackage`: AgentInstallerPackageRegisterResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RegisterAgentInstallerPackage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRegisterAgentInstallerPackageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AgentInstallerPackageRegisterSpec**](AgentInstallerPackageRegisterSpec.md) | Agent installer package to be registered | 
+
+### Return type
+
+[**AgentInstallerPackageRegisterResponseInfo**](AgentInstallerPackageRegisterResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## RegisterPhysicalMachine
 
 > PhysicalMachineRegisterInfo RegisterPhysicalMachine(ctx).Body(body).Execute()
@@ -6816,24 +8903,24 @@ Registers the Physical Machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewPhysicalMachineRegisterSpec("machine1.example.com", "WINDOWS_10") // PhysicalMachineRegisterSpec | The specification for registering the physical machine.
+	body := *openapiclient.NewPhysicalMachineRegisterSpec("machine1.example.com", "WINDOWS_10") // PhysicalMachineRegisterSpec | The specification for registering the physical machine.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RegisterPhysicalMachine(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RegisterPhysicalMachine``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RegisterPhysicalMachine`: PhysicalMachineRegisterInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RegisterPhysicalMachine`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RegisterPhysicalMachine(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RegisterPhysicalMachine``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RegisterPhysicalMachine`: PhysicalMachineRegisterInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RegisterPhysicalMachine`: %v\n", resp)
 }
 ```
 
@@ -6882,24 +8969,24 @@ Registers the RDS Server.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewRDSServerRegisterSpec("rdsserver1.example.com", "WINDOWS_SERVER_2012") // RDSServerRegisterSpec | The specification for registering the RDS Server.
+	body := *openapiclient.NewRDSServerRegisterSpec("rdsserver1.example.com", "WINDOWS_SERVER_2012") // RDSServerRegisterSpec | The specification for registering the RDS Server.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RegisterRDSServer(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RegisterRDSServer``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RegisterRDSServer`: RDSServerRegisterInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RegisterRDSServer`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RegisterRDSServer(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RegisterRDSServer``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RegisterRDSServer`: RDSServerRegisterInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RegisterRDSServer`: %v\n", resp)
 }
 ```
 
@@ -6948,22 +9035,22 @@ Removes the associated custom icon from the application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Application pool ID
+	id := "id_example" // string | Application pool ID
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RemoveCustomIcon(context.Background(), id).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RemoveCustomIcon``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.RemoveCustomIcon(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RemoveCustomIcon``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -7016,25 +9103,25 @@ Removes Local Application Pools from Global Application Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of local application pool ids to be removed.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of local application pool ids to be removed.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RemoveLocalApplicationPoolsFromGAE(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RemoveLocalApplicationPoolsFromGAE``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RemoveLocalApplicationPoolsFromGAE`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RemoveLocalApplicationPoolsFromGAE`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RemoveLocalApplicationPoolsFromGAE(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RemoveLocalApplicationPoolsFromGAE``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RemoveLocalApplicationPoolsFromGAE`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RemoveLocalApplicationPoolsFromGAE`: %v\n", resp)
 }
 ```
 
@@ -7088,25 +9175,25 @@ Removes Local Desktop Pools from Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of local desktop pool ids to be removed.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of local desktop pool ids to be removed.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RemoveLocalDesktopPoolsFromGDE(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RemoveLocalDesktopPoolsFromGDE``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RemoveLocalDesktopPoolsFromGDE`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RemoveLocalDesktopPoolsFromGDE`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RemoveLocalDesktopPoolsFromGDE(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RemoveLocalDesktopPoolsFromGDE``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RemoveLocalDesktopPoolsFromGDE`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RemoveLocalDesktopPoolsFromGDE`: %v\n", resp)
 }
 ```
 
@@ -7160,25 +9247,25 @@ Removes machines from the given manual desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be removed from the desktop pool.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be removed from the desktop pool.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RemoveMachines(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RemoveMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RemoveMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RemoveMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RemoveMachines(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RemoveMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RemoveMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RemoveMachines`: %v\n", resp)
 }
 ```
 
@@ -7232,25 +9319,25 @@ Remove RDS servers from the specified farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Farm ID
-    body := []string{"Property_example"} // []string | List of RDS server IDs representing the RDS servers to be removed from the farm.
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Farm ID
+	body := []string{"Property_example"} // []string | List of RDS server IDs representing the RDS servers to be removed from the farm.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RemoveRdsServers(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RemoveRdsServers``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RemoveRdsServers`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RemoveRdsServers`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RemoveRdsServers(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RemoveRdsServers``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RemoveRdsServers`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RemoveRdsServers`: %v\n", resp)
 }
 ```
 
@@ -7304,24 +9391,24 @@ Resets machines of global sessions in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be reset.
+	globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be reset.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ResetGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ResetGlobalSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ResetGlobalSessions`: []BulkGlobalSessionActionResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ResetGlobalSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ResetGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ResetGlobalSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ResetGlobalSessions`: []BulkGlobalSessionActionResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ResetGlobalSessions`: %v\n", resp)
 }
 ```
 
@@ -7358,7 +9445,7 @@ Name | Type | Description  | Notes
 
 ## ResetMachines
 
-> []BulkItemResponseInfo ResetMachines(ctx).Body(body).Execute()
+> []BulkItemResponseInfo ResetMachines(ctx).Body(body).Enforce(enforce).Execute()
 
 Resets the specified machines.
 
@@ -7370,24 +9457,25 @@ Resets the specified machines.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be reset.
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be reset.
+	enforce := "enforce_example" // string | Only Forensics admin can set this value.  If passed as \"true\", then this action is applicable for both held and non held vms.  If passed as \"false\", then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ResetMachines(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ResetMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ResetMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ResetMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ResetMachines(context.Background()).Body(body).Enforce(enforce).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ResetMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ResetMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ResetMachines`: %v\n", resp)
 }
 ```
 
@@ -7403,6 +9491,7 @@ Other parameters are passed through a pointer to a apiResetMachinesRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | **[]string** | List of Machine Ids representing the machines to be reset. | 
+ **enforce** | **string** | Only Forensics admin can set this value.  If passed as \&quot;true\&quot;, then this action is applicable for both held and non held vms.  If passed as \&quot;false\&quot;, then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. | 
 
 ### Return type
 
@@ -7436,24 +9525,24 @@ Resets machine of locally resourced user sessions. The machine must be managed b
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of session ids to be reset.
+	body := []string{"Property_example"} // []string | List of session ids to be reset.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ResetSessions(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ResetSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ResetSessions`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ResetSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ResetSessions(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ResetSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ResetSessions`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ResetSessions`: %v\n", resp)
 }
 ```
 
@@ -7502,24 +9591,24 @@ Restarts machines of global sessions in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be restarted.
+	globalSessionActionSpecs := []openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")} // []GlobalSessionActionSpec | Sessions which are to be restarted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RestartGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RestartGlobalSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RestartGlobalSessions`: []BulkGlobalSessionActionResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RestartGlobalSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RestartGlobalSessions(context.Background()).GlobalSessionActionSpecs(globalSessionActionSpecs).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RestartGlobalSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RestartGlobalSessions`: []BulkGlobalSessionActionResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RestartGlobalSessions`: %v\n", resp)
 }
 ```
 
@@ -7556,7 +9645,7 @@ Name | Type | Description  | Notes
 
 ## RestartMachines
 
-> []BulkItemResponseInfo RestartMachines(ctx).Body(body).Execute()
+> []BulkItemResponseInfo RestartMachines(ctx).Body(body).Enforce(enforce).Execute()
 
 Restarts the specified machines.
 
@@ -7568,24 +9657,25 @@ Restarts the specified machines.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be restarted.
+	body := []string{"Property_example"} // []string | List of Machine Ids representing the machines to be restarted.
+	enforce := "enforce_example" // string | Only Forensics admin can set this value.  If passed as \"true\", then this action is applicable for both held and non held vms.  If passed as \"false\", then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RestartMachines(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RestartMachines``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RestartMachines`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RestartMachines`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RestartMachines(context.Background()).Body(body).Enforce(enforce).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RestartMachines``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RestartMachines`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RestartMachines`: %v\n", resp)
 }
 ```
 
@@ -7601,6 +9691,7 @@ Other parameters are passed through a pointer to a apiRestartMachinesRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | **[]string** | List of Machine Ids representing the machines to be restarted. | 
+ **enforce** | **string** | Only Forensics admin can set this value.  If passed as \&quot;true\&quot;, then this action is applicable for both held and non held vms.  If passed as \&quot;false\&quot;, then this action is applicable for only non held vms.  If not passed at all, then this action is applicable for only non held vms. | 
 
 ### Return type
 
@@ -7634,24 +9725,24 @@ Restarts machine of locally resourced user sessions. The machine must be managed
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := []string{"Property_example"} // []string | List of session ids to be restarted.
+	body := []string{"Property_example"} // []string | List of session ids to be restarted.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.RestartSessions(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.RestartSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RestartSessions`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.RestartSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.RestartSessions(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.RestartSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RestartSessions`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.RestartSessions`: %v\n", resp)
 }
 ```
 
@@ -7700,24 +9791,24 @@ Resume the instant clone desktop pool push image task.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Desktop pool ID
-    taskId := "taskId_example" // string | Desktop pool task ID
-    body := *openapiclient.NewResumeTaskSpec() // ResumeTaskSpec | Specification for resuming the task. If not provided, specification will be set to default values. (optional)
+	id := "id_example" // string | Desktop pool ID
+	taskId := "taskId_example" // string | Desktop pool task ID
+	body := *openapiclient.NewResumeTaskSpec() // ResumeTaskSpec | Specification for resuming the task. If not provided, specification will be set to default values. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ResumeDesktopPoolTask(context.Background(), id, taskId).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ResumeDesktopPoolTask``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.ResumeDesktopPoolTask(context.Background(), id, taskId).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ResumeDesktopPoolTask``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -7759,6 +9850,72 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ScheduleAgentForUpgrade
+
+> AgentUpgradeTaskResponseInfo ScheduleAgentForUpgrade(ctx).Body(body).Execute()
+
+Schedule agents for upgrade.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	body := *openapiclient.NewMachineAgentUpgradeSpec(int64(1652079610000), []string{"MachineIds_example"}, int64(1652079610000)) // MachineAgentUpgradeSpec | Machine agent upgrade spec.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ScheduleAgentForUpgrade(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ScheduleAgentForUpgrade``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ScheduleAgentForUpgrade`: AgentUpgradeTaskResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ScheduleAgentForUpgrade`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiScheduleAgentForUpgradeRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MachineAgentUpgradeSpec**](MachineAgentUpgradeSpec.md) | Machine agent upgrade spec. | 
+
+### Return type
+
+[**AgentUpgradeTaskResponseInfo**](AgentUpgradeTaskResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ScheduleMaintenance
 
 > ScheduleMaintenance(ctx, id).Body(body).Execute()
@@ -7773,23 +9930,23 @@ Creates maintenance schedule for the specified farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Farm ID
-    body := *openapiclient.NewFarmMaintenanceSpec("FORCE_LOGOFF", "IMMEDIATE") // FarmMaintenanceSpec | The specification to schedule maintenance.
+	id := "id_example" // string | Farm ID
+	body := *openapiclient.NewFarmMaintenanceSpec("FORCE_LOGOFF", "IMMEDIATE") // FarmMaintenanceSpec | The specification to schedule maintenance.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ScheduleMaintenance(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ScheduleMaintenance``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.ScheduleMaintenance(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ScheduleMaintenance``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -7829,6 +9986,78 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ScheduleMaintenanceV2
+
+> []BulkItemResponseInfo ScheduleMaintenanceV2(ctx, id).Body(body).Execute()
+
+Creates maintenance schedule for the specified farm.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | Farm ID
+	body := *openapiclient.NewFarmMaintenanceSpecV2("FORCE_LOGOFF", "IMMEDIATE") // FarmMaintenanceSpecV2 | The specification to schedule maintenance.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ScheduleMaintenanceV2(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ScheduleMaintenanceV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ScheduleMaintenanceV2`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ScheduleMaintenanceV2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | Farm ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiScheduleMaintenanceV2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **body** | [**FarmMaintenanceSpecV2**](FarmMaintenanceSpecV2.md) | The specification to schedule maintenance. | 
+
+### Return type
+
+[**[]BulkItemResponseInfo**](BulkItemResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## SchedulePushImage
 
 > SchedulePushImage(ctx, id).Body(body).Execute()
@@ -7843,23 +10072,23 @@ Schedule/reschedule a request to update the image in an instant clone desktop po
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewDesktopPoolPushImageSpec("WAIT_FOR_LOGOFF") // DesktopPoolPushImageSpec | Specification for the push image operation.
+	id := "id_example" // string | id
+	body := *openapiclient.NewDesktopPoolPushImageSpec("WAIT_FOR_LOGOFF") // DesktopPoolPushImageSpec | Specification for the push image operation.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.SchedulePushImage(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.SchedulePushImage``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.SchedulePushImage(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.SchedulePushImage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -7899,6 +10128,78 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## SchedulePushImageV2
+
+> []BulkItemResponseInfo SchedulePushImageV2(ctx, id).Body(body).Execute()
+
+Schedule/reschedule a request to update the image in an instant clone desktop pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+	body := *openapiclient.NewDesktopPoolPushImageSpecV2("WAIT_FOR_LOGOFF") // DesktopPoolPushImageSpecV2 | Specification for the push image operation.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.SchedulePushImageV2(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.SchedulePushImageV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SchedulePushImageV2`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.SchedulePushImageV2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSchedulePushImageV2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **body** | [**DesktopPoolPushImageSpecV2**](DesktopPoolPushImageSpecV2.md) | Specification for the push image operation. | 
+
+### Return type
+
+[**[]BulkItemResponseInfo**](BulkItemResponseInfo.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## SendMessageToGlobalSessions
 
 > []BulkGlobalSessionActionResponseInfo SendMessageToGlobalSessions(ctx).Body(body).Execute()
@@ -7913,24 +10214,24 @@ Sends message to global sessions in the environment.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewGlobalSessionSendMessageSpec([]openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")}, "Sample Info Message", "INFO") // GlobalSessionSendMessageSpec | Global sessions to which message is to be sent.
+	body := *openapiclient.NewGlobalSessionSendMessageSpec([]openapiclient.GlobalSessionActionSpec{*openapiclient.NewGlobalSessionActionSpec([]string{"Ids_example"}, "54c122e0-d6b5-476c-af91-fd00392e5983")}, "Sample Info Message", "INFO") // GlobalSessionSendMessageSpec | Global sessions to which message is to be sent.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.SendMessageToGlobalSessions(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.SendMessageToGlobalSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SendMessageToGlobalSessions`: []BulkGlobalSessionActionResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.SendMessageToGlobalSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.SendMessageToGlobalSessions(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.SendMessageToGlobalSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SendMessageToGlobalSessions`: []BulkGlobalSessionActionResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.SendMessageToGlobalSessions`: %v\n", resp)
 }
 ```
 
@@ -7979,24 +10280,24 @@ Sends the message to locally resourced user sessions.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewSessionSendMessageSpec("Sample Info Message", "INFO", []string{"SessionIds_example"}) // SessionSendMessageSpec | Message information object to be sent to sessions.
+	body := *openapiclient.NewSessionSendMessageSpec("Sample Info Message", "INFO", []string{"SessionIds_example"}) // SessionSendMessageSpec | Message information object to be sent to sessions.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.SendMessageToSessions(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.SendMessageToSessions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SendMessageToSessions`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.SendMessageToSessions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.SendMessageToSessions(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.SendMessageToSessions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SendMessageToSessions`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.SendMessageToSessions`: %v\n", resp)
 }
 ```
 
@@ -8045,25 +10346,25 @@ Un-assigns the aliases for the specified users from the machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of User SIDs whose aliases will be un-assigned from the machine.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of User SIDs whose aliases will be un-assigned from the machine.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UnassignMachineAliases(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UnassignMachineAliases``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UnassignMachineAliases`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.UnassignMachineAliases`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.UnassignMachineAliases(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UnassignMachineAliases``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `UnassignMachineAliases`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.UnassignMachineAliases`: %v\n", resp)
 }
 ```
 
@@ -8117,25 +10418,25 @@ Un-assigns the specified users from the machine.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := []string{"Property_example"} // []string | List of User SIDs representing the users to be un-assigned from the machine.
+	id := "id_example" // string | id
+	body := []string{"Property_example"} // []string | List of User SIDs representing the users to be un-assigned from the machine.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UnassignUsers(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UnassignUsers``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UnassignUsers`: []BulkItemResponseInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.UnassignUsers`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.UnassignUsers(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UnassignUsers``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `UnassignUsers`: []BulkItemResponseInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.UnassignUsers`: %v\n", resp)
 }
 ```
 
@@ -8175,6 +10476,74 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## UnregisterAgentInstallerPackage
+
+> UnregisterAgentInstallerPackage(ctx, id).Execute()
+
+Unregisters an agent installer package.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "8fdefa82-17e4-4367-b5b1-8d97e4fd5e56" // string | Id of agent installer package to be unregistered
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UnregisterAgentInstallerPackage(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UnregisterAgentInstallerPackage``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | Id of agent installer package to be unregistered | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUnregisterAgentInstallerPackageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateApplicationPool
 
 > UpdateApplicationPool(ctx, id).Body(body).Execute()
@@ -8189,23 +10558,23 @@ Updates application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewApplicationPoolUpdateSpec(false, true, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk") // ApplicationPoolUpdateSpec | Application pool object to be updated.
+	id := "id_example" // string | id
+	body := *openapiclient.NewApplicationPoolUpdateSpec(false, true, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", *openapiclient.NewApplicationSupportedFileTypesData()) // ApplicationPoolUpdateSpec | Application pool object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateApplicationPool(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateApplicationPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateApplicationPool(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateApplicationPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8259,23 +10628,23 @@ Updates application pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewApplicationPoolUpdateSpecV2(false, true, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk") // ApplicationPoolUpdateSpecV2 | Application pool object to be updated.
+	id := "id_example" // string | id
+	body := *openapiclient.NewApplicationPoolUpdateSpecV2(false, true, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", *openapiclient.NewApplicationSupportedFileTypesData()) // ApplicationPoolUpdateSpecV2 | Application pool object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateApplicationPoolV2(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateApplicationPoolV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateApplicationPoolV2(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateApplicationPoolV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8315,6 +10684,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## UpdateApplicationPoolV3
+
+> UpdateApplicationPoolV3(ctx, id).Body(body).Execute()
+
+Updates application pool.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+	body := *openapiclient.NewApplicationPoolUpdateSpecV3(false, true, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Firefox.lnk", *openapiclient.NewApplicationSupportedFileTypesData()) // ApplicationPoolUpdateSpecV3 | Application pool object to be updated.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateApplicationPoolV3(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateApplicationPoolV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateApplicationPoolV3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **body** | [**ApplicationPoolUpdateSpecV3**](ApplicationPoolUpdateSpecV3.md) | Application pool object to be updated. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateDesktopPool
 
 > UpdateDesktopPool(ctx, id).Body(body).Execute()
@@ -8329,23 +10768,23 @@ Updates desktop pool.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewDesktopPoolUpdateSpec(false, false, false, true, "pool", false, true) // DesktopPoolUpdateSpec | Desktop Pool object to be updated.
+	id := "id_example" // string | id
+	body := *openapiclient.NewDesktopPoolUpdateSpec(false, false, false, true, "pool", false, true) // DesktopPoolUpdateSpec | Desktop Pool object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateDesktopPool(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateDesktopPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateDesktopPool(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateDesktopPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8399,23 +10838,23 @@ Updates farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewFarmUpdateSpec("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", *openapiclient.NewFarmDisplayProtocolSettingsUpdateSpec(true, "PCOIP", false), true, int32(0), *openapiclient.NewFarmSessionSettingsUpdateSpec("NEVER", "AFTER"), false) // FarmUpdateSpec | Farm object to be updated.
+	id := "id_example" // string | id
+	body := *openapiclient.NewFarmUpdateSpec("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", *openapiclient.NewFarmDisplayProtocolSettingsUpdateSpec(true, "PCOIP", false), true, int32(0), *openapiclient.NewFarmSessionSettingsUpdateSpec("NEVER", "AFTER"), false) // FarmUpdateSpec | Farm object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateFarm(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateFarm``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateFarm(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8469,23 +10908,23 @@ Updates farm.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | id
-    body := *openapiclient.NewFarmUpdateSpecV2("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", *openapiclient.NewFarmDisplayProtocolSettingsUpdateSpec(true, "PCOIP", false), true, int32(0), *openapiclient.NewFarmSessionSettingsUpdateSpec("NEVER", "AFTER"), false) // FarmUpdateSpecV2 | Farm object to be updated.
+	id := "id_example" // string | id
+	body := *openapiclient.NewFarmUpdateSpecV2("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", *openapiclient.NewFarmDisplayProtocolSettingsUpdateSpec(true, "PCOIP", false), true, int32(0), *openapiclient.NewFarmSessionSettingsUpdateSpec("NEVER", "AFTER"), false) // FarmUpdateSpecV2 | Farm object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateFarmV2(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateFarmV2``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateFarmV2(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateFarmV2``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8525,6 +10964,76 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## UpdateFarmV3
+
+> UpdateFarmV3(ctx, id).Body(body).Execute()
+
+Updates farm.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	id := "id_example" // string | id
+	body := *openapiclient.NewFarmUpdateSpecV3("6fd4638a-381f-4518-aed6-042aa3d9f14c", "ManualFarm", *openapiclient.NewFarmDisplayProtocolSettingsUpdateSpec(true, "PCOIP", false), true, *openapiclient.NewRDSHLoadBalancerSettingsUpdateSpecV2(int32(10), int32(10), int32(15), int32(10), int32(15), true, int32(20), int32(10)), int32(0), *openapiclient.NewFarmSessionSettingsUpdateSpecV2("NEVER", "AFTER", "DEFAULT"), false) // FarmUpdateSpecV3 | Farm object to be updated.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateFarmV3(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateFarmV3``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateFarmV3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **body** | [**FarmUpdateSpecV3**](FarmUpdateSpecV3.md) | Farm object to be updated. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateGlobalApplicationEntitlement
 
 > UpdateGlobalApplicationEntitlement(ctx, id).Body(body).Execute()
@@ -8539,23 +11048,23 @@ Updates a Global Application Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Application Entitlement object to be updated
-    body := *openapiclient.NewGlobalApplicationEntitlementUpdateSpec("PCOIP", "global-application-entitlement", false, false, true, "310927ee-1195-44c3-b877-5b194b4b4ea8", "ENABLED_ENFORCED", true, "global-application-entitlement", false, "ALL_SITES", false) // GlobalApplicationEntitlementUpdateSpec | Global Application Entitlement object to be updated.
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Application Entitlement object to be updated
+	body := *openapiclient.NewGlobalApplicationEntitlementUpdateSpec("PCOIP", "global-application-entitlement", false, false, true, "310927ee-1195-44c3-b877-5b194b4b4ea8", "ENABLED_ENFORCED", true, "global-application-entitlement", false, "ALL_SITES", false) // GlobalApplicationEntitlementUpdateSpec | Global Application Entitlement object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateGlobalApplicationEntitlement(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateGlobalApplicationEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateGlobalApplicationEntitlement(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateGlobalApplicationEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8609,23 +11118,23 @@ Updates a Global Desktop Entitlement.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Desktop Entitlement object to be updated
-    body := *openapiclient.NewGlobalDesktopEntitlementUpdateSpec(true, false, "PCOIP", false, false, "global-desktop-entitlement", false, true, "310927ee-1195-44c3-b877-5b194b4b4ea8", false, "global-desktop-entitlement", false, "ALL_SITES", false, false) // GlobalDesktopEntitlementUpdateSpec | Global Desktop Entitlement object to be updated.
+	id := "5134796a-322g-5fe5-343f-4daa5d25ebfe" // string | Global Desktop Entitlement object to be updated
+	body := *openapiclient.NewGlobalDesktopEntitlementUpdateSpec(true, false, "PCOIP", false, false, "global-desktop-entitlement", false, true, "310927ee-1195-44c3-b877-5b194b4b4ea8", false, "global-desktop-entitlement", false, "ALL_SITES", false, false) // GlobalDesktopEntitlementUpdateSpec | Global Desktop Entitlement object to be updated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateGlobalDesktopEntitlement(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateGlobalDesktopEntitlement``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateGlobalDesktopEntitlement(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateGlobalDesktopEntitlement``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8679,23 +11188,23 @@ Updates the RDS Server.
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | RDS Server ID
-    body := *openapiclient.NewRDSServerUpdateSpec(true, "LIMITED") // RDSServerUpdateSpec | The specification for updating the RDS Server.
+	id := "id_example" // string | RDS Server ID
+	body := *openapiclient.NewRDSServerUpdateSpec(true, "LIMITED") // RDSServerUpdateSpec | The specification for updating the RDS Server.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.UpdateRDSServer(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateRDSServer``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.InventoryAPI.UpdateRDSServer(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.UpdateRDSServer``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
 }
 ```
 
@@ -8749,25 +11258,25 @@ Validates that each application in the given list is installed on the machines b
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Desktop Pool ID
-    body := []string{"Property_example"} // []string | List of application exe paths for the applications to be validated.
+	id := "id_example" // string | Desktop Pool ID
+	body := []string{"Property_example"} // []string | List of application exe paths for the applications to be validated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ValidateInstalledApplicationsOnDesktopPool(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ValidateInstalledApplicationsOnDesktopPool``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ValidateInstalledApplicationsOnDesktopPool`: []InstalledApplicationValidationInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ValidateInstalledApplicationsOnDesktopPool`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ValidateInstalledApplicationsOnDesktopPool(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ValidateInstalledApplicationsOnDesktopPool``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ValidateInstalledApplicationsOnDesktopPool`: []InstalledApplicationValidationInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ValidateInstalledApplicationsOnDesktopPool`: %v\n", resp)
 }
 ```
 
@@ -8821,25 +11330,25 @@ Validates that each application in the given list is installed on the RDS Server
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    id := "id_example" // string | Farm ID
-    body := []string{"Property_example"} // []string | List of application exe paths for the applications to be validated.
+	id := "id_example" // string | Farm ID
+	body := []string{"Property_example"} // []string | List of application exe paths for the applications to be validated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ValidateInstalledApplicationsOnFarm(context.Background(), id).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ValidateInstalledApplicationsOnFarm``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ValidateInstalledApplicationsOnFarm`: []InstalledApplicationValidationInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ValidateInstalledApplicationsOnFarm`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ValidateInstalledApplicationsOnFarm(context.Background(), id).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ValidateInstalledApplicationsOnFarm``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ValidateInstalledApplicationsOnFarm`: []InstalledApplicationValidationInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ValidateInstalledApplicationsOnFarm`: %v\n", resp)
 }
 ```
 
@@ -8893,24 +11402,24 @@ Validates manually specified virtual machines. Ensures machine and user names ar
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func main() {
-    body := *openapiclient.NewSpecifiedNamesValidationSpec([]openapiclient.NamesSpec{*openapiclient.NewNamesSpec("Machine-002-jdoe")}) // SpecifiedNamesValidationSpec | The specification for specified names validation that needs to be validated.
+	body := *openapiclient.NewSpecifiedNamesValidationSpec([]openapiclient.NamesSpec{*openapiclient.NewNamesSpec("Machine-002-jdoe")}) // SpecifiedNamesValidationSpec | The specification for specified names validation that needs to be validated.
 
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InventoryApi.ValidateSpecifiedNames(context.Background()).Body(body).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ValidateSpecifiedNames``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ValidateSpecifiedNames`: []SpecifiedNamesValidationInfo
-    fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ValidateSpecifiedNames`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.InventoryAPI.ValidateSpecifiedNames(context.Background()).Body(body).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `InventoryAPI.ValidateSpecifiedNames``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ValidateSpecifiedNames`: []SpecifiedNamesValidationInfo
+	fmt.Fprintf(os.Stdout, "Response from `InventoryAPI.ValidateSpecifiedNames`: %v\n", resp)
 }
 ```
 

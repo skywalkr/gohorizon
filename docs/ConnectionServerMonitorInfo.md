@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **Services** | Pointer to [**[]ConnectionServerMonitorServiceStatus**](ConnectionServerMonitorServiceStatus.md) | Connection Server related Windows services information. | [optional] 
 **SessionProtocolData** | Pointer to [**[]ConnectionServerSessionProtocolData**](ConnectionServerSessionProtocolData.md) | PCoIP, RDP or BLAST protocol sessions details when clients connect directly to the connection server. | [optional] 
 **SessionThreshold** | Pointer to **int32** | The maximum number of connections allowed for the connection server through the Horizon client. If all of the secure gateways (HTTP(S)/PCOIP/BLAST) are enabled, this field denotes the maximum number of connections allowed for the connection server.If none of the secure gateways(HTTP(S)/PCOIP/BLAST) are enabled, sessionThreshold value will not be set. | [optional] 
-**Status** | Pointer to **string** | Status of the Connection Server. * OK: The Connection Server is working properly. * ERROR: Error occurred when connecting to Connection Server. * NOT_RESPONDING: The Connection Server is not responding. * UNKNOWN: Status of Connection Server is unknown. | [optional] 
+**Status** | Pointer to **string** | Status of the Connection Server. * OK: The Connection Server is working properly. * ERROR: Error occurred when connecting to Connection Server. * NOT_RESPONDING: The Connection Server is not responding. * UNKNOWN: Status of Connection Server is unknown. * RESTART_REQUIRED: Connection Server needs a Restart. | [optional] 
 **TunnelConnectionCount** | Pointer to **int32** | Number of connections tunneled through this Connection Server. | [optional] 
 
 ## Methods

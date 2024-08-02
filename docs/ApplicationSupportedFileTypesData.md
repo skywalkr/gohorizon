@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableAutoUpdateFileTypes** | **bool** | Whether or not the file types supported by this application should be allowed to automatically update to reflect changes reported by the agent. Typically this should be set to false if the application has manually configured supported file types. Default is true. | 
-**EnableAutoUpdateOtherFileTypes** | **bool** | Whether or not the other file types supported by this application should be allowed to automatically update to reflect changes reported by the agent. Typically this should be set to false if the application has manually configured supported file types. | 
+**EnableAutoUpdateFileTypes** | Pointer to **bool** | Whether or not the file types supported by this application should be allowed to automatically update to reflect changes reported by the agent. Typically this should be set to false if the application has manually configured supported file types. Default is true. | [optional] 
+**EnableAutoUpdateOtherFileTypes** | Pointer to **bool** | Whether or not the other file types supported by this application should be allowed to automatically update to reflect changes reported by the agent. Typically this should be set to false if the application has manually configured supported file types. Default is true. | [optional] 
 **FileTypes** | Pointer to [**[]ApplicationFileTypeData**](ApplicationFileTypeData.md) | Set of file types reported by the application as supported (if this application is discovered) or as specified by the administrator (if this application is manually configured). If unset, this application does not present any file type support. | [optional] 
 **OtherFileTypes** | Pointer to [**[]ApplicationOtherFileTypeData**](ApplicationOtherFileTypeData.md) | This represents the different file types reported by Application that can be passed from agent to client via broker or as specified by the administrator (if this application is manually configured). If unset, this application does not present any other file type support. | [optional] 
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewApplicationSupportedFileTypesData
 
-`func NewApplicationSupportedFileTypesData(enableAutoUpdateFileTypes bool, enableAutoUpdateOtherFileTypes bool, ) *ApplicationSupportedFileTypesData`
+`func NewApplicationSupportedFileTypesData() *ApplicationSupportedFileTypesData`
 
 NewApplicationSupportedFileTypesData instantiates a new ApplicationSupportedFileTypesData object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetEnableAutoUpdateFileTypes sets EnableAutoUpdateFileTypes field to given value.
 
+### HasEnableAutoUpdateFileTypes
+
+`func (o *ApplicationSupportedFileTypesData) HasEnableAutoUpdateFileTypes() bool`
+
+HasEnableAutoUpdateFileTypes returns a boolean if a field has been set.
 
 ### GetEnableAutoUpdateOtherFileTypes
 
@@ -67,6 +72,11 @@ and a boolean to check if the value has been set.
 
 SetEnableAutoUpdateOtherFileTypes sets EnableAutoUpdateOtherFileTypes field to given value.
 
+### HasEnableAutoUpdateOtherFileTypes
+
+`func (o *ApplicationSupportedFileTypesData) HasEnableAutoUpdateOtherFileTypes() bool`
+
+HasEnableAutoUpdateOtherFileTypes returns a boolean if a field has been set.
 
 ### GetFileTypes
 

@@ -1,5 +1,6 @@
-module github.com/umich-vci/gohorizon
+module github.com/skywalkr/gohorizon/v8
 
-go 1.16
+go 1.18
 
-require golang.org/x/oauth2 v0.0.0-20210218202405-ba52d332ba99
+require (
+)

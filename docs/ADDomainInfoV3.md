@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdDomainAdvancedSettings** | Pointer to [**ADDomainAdvancedSettings**](ADDomainAdvancedSettings.md) |  | [optional] 
-**AuxiliaryAccounts** | Pointer to [**[]ServiceAccountCredentialsInfo**](ServiceAccountCredentialsInfo.md) | Auxiliary service accounts information of untrusted domain. | [optional] 
+**AdDomainAdvancedSettings** | Pointer to [**ADDomainAdvancedSettingsInfo**](ADDomainAdvancedSettingsInfo.md) |  | [optional] 
+**AuxiliaryAccounts** | Pointer to [**[]ADDomainAuxiliaryServiceAccountInfo**](ADDomainAuxiliaryServiceAccountInfo.md) | Auxiliary service accounts information of untrusted domain. | [optional] 
 **DnsName** | Pointer to **string** | DNS name of the AD Domain. | [optional] 
 **DomainType** | Pointer to **string** | AD Domain Type. * CONNECTION_SERVER_DOMAIN: The domain having trust with connection server domain. * NO_TRUST_DOMAIN: The domain not having any trust with connection server domain. | [optional] 
 **Id** | Pointer to **string** | Unique SID representing AD Domain. | [optional] 
 **NetbiosName** | Pointer to **string** | NetBIOS name of the AD Domain. | [optional] 
-**PrimaryAccount** | Pointer to [**ServiceAccountCredentials**](ServiceAccountCredentials.md) |  | [optional] 
+**PrimaryAccount** | Pointer to [**ADDomainPrimaryServiceAccountInfo**](ADDomainPrimaryServiceAccountInfo.md) |  | [optional] 
 
 ## Methods
 
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAdDomainAdvancedSettings
 
-`func (o *ADDomainInfoV3) GetAdDomainAdvancedSettings() ADDomainAdvancedSettings`
+`func (o *ADDomainInfoV3) GetAdDomainAdvancedSettings() ADDomainAdvancedSettingsInfo`
 
 GetAdDomainAdvancedSettings returns the AdDomainAdvancedSettings field if non-nil, zero value otherwise.
 
 ### GetAdDomainAdvancedSettingsOk
 
-`func (o *ADDomainInfoV3) GetAdDomainAdvancedSettingsOk() (*ADDomainAdvancedSettings, bool)`
+`func (o *ADDomainInfoV3) GetAdDomainAdvancedSettingsOk() (*ADDomainAdvancedSettingsInfo, bool)`
 
 GetAdDomainAdvancedSettingsOk returns a tuple with the AdDomainAdvancedSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAdDomainAdvancedSettings
 
-`func (o *ADDomainInfoV3) SetAdDomainAdvancedSettings(v ADDomainAdvancedSettings)`
+`func (o *ADDomainInfoV3) SetAdDomainAdvancedSettings(v ADDomainAdvancedSettingsInfo)`
 
 SetAdDomainAdvancedSettings sets AdDomainAdvancedSettings field to given value.
 
@@ -58,20 +58,20 @@ HasAdDomainAdvancedSettings returns a boolean if a field has been set.
 
 ### GetAuxiliaryAccounts
 
-`func (o *ADDomainInfoV3) GetAuxiliaryAccounts() []ServiceAccountCredentialsInfo`
+`func (o *ADDomainInfoV3) GetAuxiliaryAccounts() []ADDomainAuxiliaryServiceAccountInfo`
 
 GetAuxiliaryAccounts returns the AuxiliaryAccounts field if non-nil, zero value otherwise.
 
 ### GetAuxiliaryAccountsOk
 
-`func (o *ADDomainInfoV3) GetAuxiliaryAccountsOk() (*[]ServiceAccountCredentialsInfo, bool)`
+`func (o *ADDomainInfoV3) GetAuxiliaryAccountsOk() (*[]ADDomainAuxiliaryServiceAccountInfo, bool)`
 
 GetAuxiliaryAccountsOk returns a tuple with the AuxiliaryAccounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAuxiliaryAccounts
 
-`func (o *ADDomainInfoV3) SetAuxiliaryAccounts(v []ServiceAccountCredentialsInfo)`
+`func (o *ADDomainInfoV3) SetAuxiliaryAccounts(v []ADDomainAuxiliaryServiceAccountInfo)`
 
 SetAuxiliaryAccounts sets AuxiliaryAccounts field to given value.
 
@@ -183,20 +183,20 @@ HasNetbiosName returns a boolean if a field has been set.
 
 ### GetPrimaryAccount
 
-`func (o *ADDomainInfoV3) GetPrimaryAccount() ServiceAccountCredentials`
+`func (o *ADDomainInfoV3) GetPrimaryAccount() ADDomainPrimaryServiceAccountInfo`
 
 GetPrimaryAccount returns the PrimaryAccount field if non-nil, zero value otherwise.
 
 ### GetPrimaryAccountOk
 
-`func (o *ADDomainInfoV3) GetPrimaryAccountOk() (*ServiceAccountCredentials, bool)`
+`func (o *ADDomainInfoV3) GetPrimaryAccountOk() (*ADDomainPrimaryServiceAccountInfo, bool)`
 
 GetPrimaryAccountOk returns a tuple with the PrimaryAccount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrimaryAccount
 
-`func (o *ADDomainInfoV3) SetPrimaryAccount(v ServiceAccountCredentials)`
+`func (o *ADDomainInfoV3) SetPrimaryAccount(v ADDomainPrimaryServiceAccountInfo)`
 
 SetPrimaryAccount sets PrimaryAccount field to given value.
 

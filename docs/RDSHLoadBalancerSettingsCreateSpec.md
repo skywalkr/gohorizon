@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **DiskQueueLengthThreshold** | Pointer to **int32** | Represents the threshold of average number of both read and write requests that were queued for the selected disk during the sample interval. If the value is 0, then this metric is not considered for load balancing. Default value is 0. | [optional] 
 **DiskReadLatencyThreshold** | Pointer to **int32** | Represents the threshold of average time, in milliseconds, of a read of data from the disk. If the value is 0, then this metric is not considered for load balancing. Default value is 0. | [optional] 
 **DiskWriteLatencyThreshold** | Pointer to **int32** | Represents the threshold of average time, in milliseconds, of a write of data to the disk. If the value is 0, then this metric is not considered for load balancing. Default value is 0. | [optional] 
-**IncludeSessionCount** | Pointer to **bool** | Indicates whether to include session count for load balancing. Default value is true. | [optional] 
+**IncludeSessionCount** | Pointer to **bool** | Indicates whether to include session count for load balancing. Default value is true when use_custom_script_for_load_balancing is false. | [optional] 
 **MemoryThreshold** | Pointer to **int32** | Represents threshold of memory usage, in percentage. If the value is 0, then this metric is not considered for load balancing. Default value is 0. | [optional] 
 
 ## Methods

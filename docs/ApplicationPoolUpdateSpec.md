@@ -19,14 +19,14 @@ Name | Type | Description | Notes
 **Publisher** | Pointer to **string** | Application publisher | [optional] 
 **ShortcutLocations** | Pointer to **[]string** | Locations of the category folder in the user&#39;s OS containing a shortcut to the application. The value must be set if category folder name is provided. | [optional] 
 **StartFolder** | Pointer to **string** | Starting folder for application | [optional] 
-**SupportedFileTypesData** | Pointer to [**ApplicationSupportedFileTypesData**](ApplicationSupportedFileTypesData.md) |  | [optional] 
+**SupportedFileTypesData** | [**ApplicationSupportedFileTypesData**](ApplicationSupportedFileTypesData.md) |  | 
 **Version** | Pointer to **string** | Application version. | [optional] 
 
 ## Methods
 
 ### NewApplicationPoolUpdateSpec
 
-`func NewApplicationPoolUpdateSpec(enablePreLaunch bool, enabled bool, executablePath string, ) *ApplicationPoolUpdateSpec`
+`func NewApplicationPoolUpdateSpec(enablePreLaunch bool, enabled bool, executablePath string, supportedFileTypesData ApplicationSupportedFileTypesData, ) *ApplicationPoolUpdateSpec`
 
 NewApplicationPoolUpdateSpec instantiates a new ApplicationPoolUpdateSpec object
 This constructor will assign default values to properties that have it defined,
@@ -420,11 +420,6 @@ and a boolean to check if the value has been set.
 
 SetSupportedFileTypesData sets SupportedFileTypesData field to given value.
 
-### HasSupportedFileTypesData
-
-`func (o *ApplicationPoolUpdateSpec) HasSupportedFileTypesData() bool`
-
-HasSupportedFileTypesData returns a boolean if a field has been set.
 
 ### GetVersion
 

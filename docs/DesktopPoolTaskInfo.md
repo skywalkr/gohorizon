@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ErrorVmtaskCount** | Pointer to **int32** | Number of VMs whose task is in fault state. | [optional] 
 **HaltedVmtaskCount** | Pointer to **int32** | Number of VMs whose task is in holding state. | [optional] 
 **Id** | Pointer to **string** | Unique ID representing Desktop Pool Task. | [optional] 
-**Operation** | Pointer to **string** | The current desktop pool operation. * PUSH_IMAGE: A push image operation. | [optional] 
+**Operation** | Pointer to **string** | The current desktop pool operation. * PUSH_IMAGE: A push image operation. * ARCHIVE: An archive operation. * TAGGING: A tagging operation. | [optional] 
 **RemainingVmtaskCount** | Pointer to **int32** | Number of VMs whose task is scheduled or running. | [optional] 
 **ScheduleTime** | Pointer to **int64** | Time at which desktop pool task is scheduled to start. | [optional] 
 
